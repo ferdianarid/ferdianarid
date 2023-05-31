@@ -32,7 +32,7 @@ const SignUp: NextPage = () => {
             .required("Field Password Required"),
         confirmPassword: Yup.string()
             .min(8, "Password must be more than 8 character")
-            .oneOf([Yup.ref("password")], "Password Confirmation must match with Password")
+            // .oneOf([Yup.ref("password")], "Password Confirmation must match with Password")
             .required("Field Confirm Password Required"),
     })
 
