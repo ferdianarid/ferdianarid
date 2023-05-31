@@ -1,0 +1,22 @@
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "no-unused-vars": "error",
+    "semi": [2, "never"],
+    "quotes": ["error","double", "avoid-escape"],
+    "prefer-const": "error",
+    "arrow-parens": "error",
+    "callback-return": "error",
+    "comma-spacing": [
+      "error", {"before": false, "after": true}
+    ],
+    "array-bracket-spacing": [
+      "error", "never", 
+      {"singleValue": false}
+    ],
+    "space-in-parens": ["error", "never"],
+    "object-curly-spacing": ["error", "always"],
+    "react/no-unescaped-entities": "warn",
+    "no-duplicate-imports": "error"
+  }
+}
