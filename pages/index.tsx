@@ -24,7 +24,7 @@ const Home: NextPage = () => {
   }
   return (
     <Fragment>
-      <Meta title="Ferdian Ahmad R" />
+      <Meta />
       <PagesLayout>
         <div className="w-full bg-neutral-10 dark:bg-primary-pressed pt-6 md:pt-10">
           <div className="max-w-[1440px] mx-auto px-6 md:px-24 pt-14 md:pt-28 md:pb-48 pb-48 flex flex-col md:flex-row items-center justify-between">

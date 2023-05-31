@@ -19,7 +19,7 @@ const SignIn: NextPage = () => {
     const { SignInWithGithub, isGithubLoading } = useGithubOAuth()
     const { SignInWithGoogle, isGoogleLoading } = useGoogleOAuth()
 
-    const [ isLoginLoading, setIsLoading ] = useState<SetStateAction<boolean>>(false)
+    const [isLoginLoading, setIsLoading] = useState<SetStateAction<boolean>>(false)
 
     const initialValues = { email: "", password: "" }
 
@@ -55,7 +55,7 @@ const SignIn: NextPage = () => {
     }
     return (
         <Fragment>
-            <Meta title="Sign In Account" />
+            <Meta />
             <AuthLayout>
                 <div className="w-full bg-neutral-10 dark:bg-primary-pressed">
                     <div className="max-w-[1440px] mx-auto text-neutral-10 px-6 md:px-24 flex pb-10 flex-col md:flex-row justify-between md:justify-between md:space-x-16 items-center">

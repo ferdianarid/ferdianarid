@@ -11,7 +11,7 @@ const defaultMeta = {
 }
 
 interface MetaFunction {
-    title: string
+    title?: string
     siteName?: string
     description?: string
     url?: string
@@ -19,6 +19,7 @@ interface MetaFunction {
     robots?: string
 }
 
+// eslint-disable-next-line no-unused-vars
 export const Meta: React.FC<MetaFunction> = ({ title }) => {
     const router = useRouter()
 
@@ -28,7 +29,7 @@ export const Meta: React.FC<MetaFunction> = ({ title }) => {
 
     return (
         <Head>
-            <title>{title} - Frontend Engineer</title>
+            <title>Ferdian | Frontend Engineer</title>
             <meta httpEquiv="X-UA-Compatible" content="IE-Edge, chrome" />
             <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
             <meta name="description" content="Ferdian portfolio" />

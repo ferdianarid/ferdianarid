@@ -16,7 +16,7 @@ const PostDetail: NextPage = ({ frontMatter, mdxSource }: any) => {
     const { title, author, role, category, imageUrl, createdAt } = frontMatter
     return (
         <Fragment>
-            <Meta title="Detail Post" />
+            <Meta />
             <PagesLayout>
                 <div className="w-full bg-neutral-10 dark:bg-primary-pressed text-neutral-10">
                     <div className="max-w-[1440px] mx-auto px-6 md:px-48">

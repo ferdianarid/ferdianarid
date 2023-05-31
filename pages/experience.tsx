@@ -17,7 +17,7 @@ const Experience: NextPage = () => {
     const lang = locale === "id" ? id : en
     return (
         <Fragment>
-            <Meta title="Experience" />
+            <Meta />
             <PagesLayout>
                 <div className="w-full bg-neutral-10 dark:bg-primary-pressed">
                     <div className="max-w-[1440px] mx-auto py-10 px-6 md:px-24">
