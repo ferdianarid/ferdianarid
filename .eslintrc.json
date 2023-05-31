@@ -10,10 +10,10 @@
     "comma-spacing": [
       "error", {"before": false, "after": true}
     ],
-    "array-bracket-spacing": [
-      "error", "never", 
-      {"singleValue": false}
-    ],
+    // "array-bracket-spacing": [
+    //   "error", "never", 
+    //   {"singleValue": false}
+    // ],
     "space-in-parens": ["error", "never"],
     "object-curly-spacing": ["error", "always"],
     "react/no-unescaped-entities": "warn",
