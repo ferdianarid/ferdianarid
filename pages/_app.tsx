@@ -1,4 +1,7 @@
-import type { AppProps, NextWebVitalsMetric } from "next/app"
+import type {
+  AppProps
+  // NextWebVitalsMetric
+} from "next/app"
 import { useRouter } from "next/router"
 import { Fragment, useEffect } from "react"
 import { Toaster } from "react-hot-toast"
@@ -35,8 +38,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   )
 }
 
-export function reportWebVitals(metric: NextWebVitalsMetric) {
-  console.log(metric)
-}
+// export function reportWebVitals(metric: NextWebVitalsMetric) {
+//   console.log(metric)
+// }
 
 export default MyApp

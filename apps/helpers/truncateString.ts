@@ -1,8 +1,8 @@
-const truncateString = (character: string) => {
-    if (character.length <= 15) {
+const truncateString = (character: string, limit: number = 15) => {
+    if (character.length <= limit) {
         return character
     }
-    return character.slice(0, 15) + "..."
+    return character.slice(0, limit) + "..."
 }
 
 export default truncateString

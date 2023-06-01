@@ -6,7 +6,7 @@ export const HeadingText: React.FC<ITextProps> = ({ children, isLight, className
         isLight ? "text-transparent bg-clip-text bg-gradient-to-r from-purple-600 pb-2 to-yellow-400" : "text-transparent bg-clip-text bg-gradient-to-r from-purple-800 pb-2 to-yellow-400",
         "font-gilroy-bold text-5xl md:text-7xl",
         className
-    )}> {children}</h1 >
+    )}>{children}</h1 >
 }
 
 export const PageText: React.FC<ITextProps> = ({ children, isLight, className }) => {

@@ -12,6 +12,7 @@ import { HeadingText, ParagraphText } from "@components/atoms/Text"
 import ProjectCarousel from "@components/templates/ProjectCarousel"
 import en from "@locales/en"
 import id from "@locales/id"
+import { TypeAnimation } from "react-type-animation"
 
 const Home: NextPage = () => {
   const router = useRouter()
@@ -30,7 +31,24 @@ const Home: NextPage = () => {
           <div className="max-w-[1440px] mx-auto px-6 md:px-24 pt-14 md:pt-28 md:pb-48 pb-48 flex flex-col md:flex-row items-center justify-between">
             <div className="w-full md:w-1/2">
               <p className="text-md text-neutral-10 w-fit font-gilroy-bold bg-primary-pressed dark:bg-primary-hover dark:bg-opacity-30 py-2 px-4 rounded-lg">{lang.badge}</p>
-              <h1 data-testid="heading" className="my-7 text-primary-pressed dark:text-neutral-10 font-gilroy-bold text-5xl md:text-6xl">{lang.greeting} <span className="text-transparent rounded-lg bg-clip-text bg-gradient-to-r from-purple-600 to-yellow-400 font-gilroy-bold bg-opacity-50">Ferdian</span></h1>
+              <h1 data-testid="heading" className="my-7">
+                <TypeAnimation
+                  sequence={[
+                    lang.greeting,
+                    1000
+                  ]}
+                  className="text-primary-pressed dark:text-neutral-10 font-gilroy-bold text-5xl md:text-6xl"
+                  cursor={false}
+                />
+                <TypeAnimation
+                  sequence={[
+                    1700,
+                    " Ferdian"
+                  ]}
+                  className="text-transparent rounded-lg bg-clip-text bg-gradient-to-r from-purple-600 to-yellow-400 font-gilroy-bold bg-opacity-50 text-5xl md:text-6xl"
+                  cursor={false}
+                />
+              </h1>
               <ParagraphText isLight>{lang.subgreeting}</ParagraphText>
               <div className="mt-10 md:mt-20 flex items-center space-x-3">
                 <button onClick={emailHandler} name="cta-button" className="w-full md:w-fit px-8 py-3 rounded-lg bg-semantic-warning-main font-gilroy-bold text-md text-neutral-10">{lang.email}</button>

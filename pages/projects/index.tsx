@@ -38,26 +38,23 @@ const Projects: NextPage = ({ project }: any) => {
                                 <ParagraphText>{lang.subheaderProject}</ParagraphText>
                             </div>
                             <div className="w-full md:w-fit flex items-center">
-                                <input ref={queryRefs} className="w-full bg-slate-100 dark:bg-primary-hover text-heading-6 py-2 px-4 rounded-l-lg text-neutral-10 focus:outline-none focus:border-2 focus:border-semantic-warning-main" type="text" placeholder={lang.searchbarProject} name="query" id="query" />
+                                <input type="search" ref={queryRefs} className="w-full bg-slate-100 dark:bg-primary-hover text-sm py-[13px] px-4 rounded-l-lg text-neutral-10 focus:outline-none focus:border-2 focus:border-semantic-warning-main" placeholder={lang.searchbarProject} name="query" id="query" />
                                 <button onClick={queryHandler} className="py-3 text-heading-6 text-neutral-10 px-4 rounded-r-lg bg-slate-100 dark:bg-primary-hover"><FaSearch className="text-neutral-40 dark:text-neutral-10" size={21} /></button>
                             </div>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 h-full gap-12 md:gap-8 mt-8">
-                            {project.map((item: any) => {
-                                const { id, projectId, projectUrl } = item
-                                return (
-                                    <ProjectCard
-                                        isLight
-                                        liveBadge
-                                        key={id}
-                                        projectId={projectId}
-                                        projectUrl={projectUrl}
-                                        fileImage={item.frontMatter.imageUrl}
-                                        title={item.frontMatter.name}
-                                        description={item.frontMatter.description}
-                                    />
-                                )
-                            })}
+                            {project.map((item: any) => (
+                                <ProjectCard
+                                    key={item.id}
+                                    isLight
+                                    liveBadge
+                                    projectId={item.projectId}
+                                    projectUrl={item.frontMatter.projectUrl}
+                                    fileImage={item.frontMatter.imageUrl}
+                                    title={item.frontMatter.name}
+                                    description={item.frontMatter.description}
+                                />
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -69,7 +66,7 @@ const Projects: NextPage = ({ project }: any) => {
 export async function getStaticProps() {
     const files = fs.readdirSync(path.join("apps", "data", "projects"))
 
-    const project = files.map((filename: any) => {
+    const project = files.map((filename: string) => {
         const markdownWithMeta = fs.readFileSync(path.join("apps", "data", "projects", filename))
 
         const { data: frontMatter } = matter(markdownWithMeta)
