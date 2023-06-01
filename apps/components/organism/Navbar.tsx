@@ -8,6 +8,7 @@ import en from "@locales/en"
 import id from "@locales/id"
 import { LanguageList } from "@data/data"
 import Switcher from "@components/atoms/Button/Switcher"
+import clsx from "clsx"
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<SetStateAction<boolean | any>>(false)
@@ -36,13 +37,19 @@ const Navbar: React.FC = () => {
               <div className="hidden md:block">
                 <div className="ml-16 flex items-center space-x-10 relative z-20">
                   <Link href="/projects">
-                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.4 }} className=" text-primary-pressed dark:text-neutral-10 font-gilroy-medium text-sm hover:cursor-pointer">
+                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.4 }} className={clsx(
+                      "text-primary-pressed dark:text-neutral-10 text-sm hover:cursor-pointer",
+                      router.pathname === "/projects" ? "dark:text-semantic-warning-main font-semibold" : "dark:text-neutral-10 font-gilroy-medium"
+                    )}>
                       {lang.navigationProject}
                     </motion.p>
                   </Link>
                   <PostsCategory textColors="text-primary-pressed dark:text-neutral-10" />
                   <Link href="/experience">
-                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-primary-pressed dark:text-neutral-10 font-gilroy-medium text-sm hover:cursor-pointer">
+                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className={clsx(
+                      "text-primary-pressed dark:text-neutral-10 text-sm hover:cursor-pointer",
+                      router.pathname === "/experience" ? "dark:text-semantic-warning-main font-semibold" : "dark:text-neutral-10 font-gilroy-medium"
+                    )}>
                       {lang.navigationExperience}
                     </motion.p>
                   </Link>
@@ -118,13 +125,19 @@ const Navbar: React.FC = () => {
               <div className="md:hidden" id="mobile-menu">
                 <div ref={ref} className="py-2 mb-7 px-5 mt-4 md:mt-0 flex flex-col space-y-3">
                   <Link href="/projects">
-                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.4 }} className=" text-primary-pressed dark:text-neutral-10 rounded-lg py-3 font-gilroy-medium text-sm hover:cursor-pointer">
+                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.4 }} className={clsx(
+                      "text-primary-pressed py-3 rounded-lg dark:text-neutral-10 text-sm hover:cursor-pointer",
+                      router.pathname === "/projects" ? "dark:text-semantic-warning-main font-semibold" : "dark:text-neutral-10 font-gilroy-medium"
+                    )}>
                       {lang.navigationProject}
                     </motion.p>
                   </Link>
                   <PostsCategory textColors="text-primary-pressed dark:text-neutral-10" />
                   <Link href="/experience">
-                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-primary-pressed dark:text-neutral-10 font-gilroy-medium text-sm rounded-lg py-3 hover:cursor-pointer">
+                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className={clsx(
+                      "text-primary-pressed py-3 rounded-lg dark:text-neutral-10 text-sm hover:cursor-pointer",
+                      router.pathname === "/experience" ? "dark:text-semantic-warning-main font-semibold" : "dark:text-neutral-10 font-gilroy-medium"
+                    )}>
                       {lang.navigationExperience}
                     </motion.p>
                   </Link>

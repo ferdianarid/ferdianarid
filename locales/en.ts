@@ -2,8 +2,8 @@
 export default {
     // Header Section
     badge: "Technology",
-    greeting: "Hi! Im",
-    subgreeting: "Frontend Developer based in Jombang. Focus developing micro interaction in the Frontend of Website. And also integrating with backend or CMS",
+    greeting: "Hi, I'm",
+    subgreeting: "Frontend Developer based in Jombang. Focus to build and maintaining a website to increase accessibility and responsive interaction of every component. Make sure the web loads properly. Sometimes developing micro-interaction in the Frontend of the Website. And I am also integrating with backend API or CMS",
     email: "Email me",
     background: "About my background",
     descriptionBackground1: "Since high school I have learned the basics of website programming, even though I majored in computer and network engineering at that time. but Im curious about the website, there I decided to explore more about HTML CSS JS",

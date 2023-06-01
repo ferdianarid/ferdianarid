@@ -9,6 +9,9 @@
       "@data/*": [
         "apps/data/*"
       ],
+      "@containers/*": [
+        "apps/containers/*"
+      ],
       "@firebase/*": [
         "firebase/*"
       ],

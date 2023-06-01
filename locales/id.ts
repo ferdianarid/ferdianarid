@@ -2,8 +2,8 @@
 export default {
     // Header Section
     badge: "Teknologi",
-    greeting: "Hi! saya",
-    subgreeting: "Frontend Developer berbasis di Jombang. Fokus mengembangkan interaksi mikro di Frontend Website. Dan juga berintegrasi dengan backend atau CMS",
+    greeting: "Hai, saya",
+    subgreeting: "Pengembang Frontend berbasis di Jombang. Fokus untuk membangun dan memelihara situs web untuk meningkatkan aksesibilitas dan interaksi responsif dari setiap komponen. Pastikan web dimuat dengan benar. Terkadang mengembangkan interaksi mikro di Frontend Situs Web. Dan saya juga mengintegrasikan dengan backend API atau CMS",
     email: "Email saya",
     background: "Ini Latar Belakang Saya",
     descriptionBackground1: "Sejak SMA saya sudah mempelajari dasar-dasar pemrograman website, meskipun saat itu saya mengambil jurusan teknik komputer dan jaringan. tapi saya penasaran dengan websitenya, disana saya memutuskan untuk lebih mendalami tentang HTML CSS JS",
