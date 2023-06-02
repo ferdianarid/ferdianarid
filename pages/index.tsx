@@ -34,7 +34,7 @@ const Home: NextPage = () => {
             sequence={[
               "Currently work at Dipa Inhouse"
             ]}
-            className="text-sm font-semibold text-neutral-10 dark:text-neutral-10 text-center"
+            className="text-sm font-gilroy-semibold text-neutral-10 dark:text-neutral-10 text-center"
             cursor={false}
           />
         </h1>

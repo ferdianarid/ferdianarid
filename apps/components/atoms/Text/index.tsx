@@ -17,8 +17,8 @@ export const PageText: React.FC<ITextProps> = ({ children, isLight, className })
     )}>{children}</h1>
 }
 
-export const ParagraphText: React.FC<ITextProps> = ({ children, isLight, className }) => {
-    return <p className={clsx(
+export const ParagraphText: React.FC<ITextProps> = ({ children, isLight, className, animationEffect, animationDuration, animationDelay }) => {
+    return <p data-aos={animationEffect} data-aos-duration={animationDuration} data-aos-delay={animationDelay} className={clsx(
         isLight ? "dark:text-neutral-10" : "text-neutral-60",
         "text-heading-7 leading-relaxed font-gilroy-normal",
         className

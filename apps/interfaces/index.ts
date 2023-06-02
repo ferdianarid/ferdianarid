@@ -48,4 +48,7 @@ export interface ITextProps {
     children: ReactNode | string,
     isLight?: boolean,
     className?: string
+    animationEffect?: string
+    animationDuration?: string
+    animationDelay?: string
 }
