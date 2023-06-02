@@ -52,3 +52,15 @@ export interface ITextProps {
     animationDuration?: string
     animationDelay?: string
 }
+
+export interface ICompanyCard {
+    id?: number
+    image: string
+    title: string
+}
+
+export interface ICompany {
+    id?: number
+    company: string
+    route?: string|any
+}
