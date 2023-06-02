@@ -53,6 +53,14 @@ const Navbar: React.FC = () => {
                       {lang.navigationExperience}
                     </motion.p>
                   </Link>
+                  <Link href="/about">
+                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className={clsx(
+                      "text-primary-pressed dark:text-neutral-10 text-sm hover:cursor-pointer",
+                      router.pathname === "/about" ? "dark:text-semantic-warning-main font-semibold" : "dark:text-neutral-10 font-gilroy-medium"
+                    )}>
+                      {lang.navigationAbout}
+                    </motion.p>
+                  </Link>
                   {/* <Link href="/services">
                     <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className="text-primary-pressed dark:text-neutral-10 font-gilroy-medium text-sm hover:cursor-pointer">
                       {lang.navigationService}
@@ -139,6 +147,14 @@ const Navbar: React.FC = () => {
                       router.pathname === "/experience" ? "dark:text-semantic-warning-main font-semibold" : "dark:text-neutral-10 font-gilroy-medium"
                     )}>
                       {lang.navigationExperience}
+                    </motion.p>
+                  </Link>
+                  <Link href="/about">
+                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className={clsx(
+                      "text-primary-pressed py-3 rounded-lg dark:text-neutral-10 text-sm hover:cursor-pointer",
+                      router.pathname === "/about" ? "dark:text-semantic-warning-main font-semibold" : "dark:text-neutral-10 font-gilroy-medium"
+                    )}>
+                      {lang.navigationAbout}
                     </motion.p>
                   </Link>
                   {/* <Link href="/services">

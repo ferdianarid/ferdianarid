@@ -22,22 +22,22 @@ const Footer: React.FC = () => {
                             <h1 className="font-gilroy-bold text-xl text-primary-pressed dark:text-neutral-10">Discover</h1>
                             <div className="grid gap-y-4 mt-5">
                                 <ParagraphText>
-                                    <Link href="/posts" className="hover:cursor-pointer">
+                                    <Link href="/posts" className="font-gilroy-medium hover:cursor-pointer">
                                         Posts
                                     </Link>
                                 </ParagraphText>
                                 <ParagraphText>
-                                    <Link href="/services" className="hover:cursor-pointer">
+                                    <Link href="/services" className="font-gilroy-medium hover:cursor-pointer">
                                         Services
                                     </Link>
                                 </ParagraphText>
                                 <ParagraphText>
-                                    <Link href="/projects" className="hover:cursor-pointer">
+                                    <Link href="/projects" className="font-gilroy-medium hover:cursor-pointer">
                                         Projects
                                     </Link>
                                 </ParagraphText>
                                 <ParagraphText>
-                                    <Link href="/experience" className="hover:cursor-pointer">
+                                    <Link href="/experience" className="font-gilroy-medium hover:cursor-pointer">
                                         Experience
                                     </Link>
                                 </ParagraphText>
@@ -47,22 +47,22 @@ const Footer: React.FC = () => {
                             <h1 className="font-gilroy-bold text-xl text-primary-pressed dark:text-neutral-10">Social Media</h1>
                             <div className="grid gap-y-4 mt-5">
                                 <ParagraphText>
-                                    <Link href="https://github.com/ferdianar" className="hover:cursor-pointer">
+                                    <Link href="https://github.com/ferdianar" className="font-gilroy-medium hover:cursor-pointer">
                                         Github
                                     </Link>
                                 </ParagraphText>
                                 <ParagraphText>
-                                    <Link href="https://www.linkedin.com/in/ferdianar" className="hover:cursor-pointer">
+                                    <Link href="https://www.linkedin.com/in/ferdianar" className="font-gilroy-medium hover:cursor-pointer">
                                         LinkedIn
                                     </Link>
                                 </ParagraphText>
                                 <ParagraphText>
-                                    <Link href="https://facebook.com/ferdian.r.37" className="hover:cursor-pointer">
+                                    <Link href="https://facebook.com/ferdian.r.37" className="font-gilroy-medium hover:cursor-pointer">
                                         Facebook
                                     </Link>
                                 </ParagraphText>
                                 <ParagraphText>
-                                    <Link href="https://instagram.com/ferdianarid" className="hover:cursor-pointer">
+                                    <Link href="https://instagram.com/ferdianarid" className="font-gilroy-medium hover:cursor-pointer">
                                         Instagram
                                     </Link>
                                 </ParagraphText>

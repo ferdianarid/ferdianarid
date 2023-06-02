@@ -19,6 +19,7 @@ export default {
     navigationProject: "Projects",
     navigationPosts: "Posts",
     navigationExperience: "Experience",
+    navigationAbout: "About",
     navigationService: "Services",
     navigationAccount: "Account",
     signInButton: "Sign In",

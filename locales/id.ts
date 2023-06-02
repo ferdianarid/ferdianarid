@@ -19,6 +19,7 @@ export default {
     navigationProject: "Proyek",
     navigationPosts: "Artikel",
     navigationExperience: "Pengalaman",
+    navigationAbout: "Tentang",
     navigationService: "Layanan",
     navigationAccount: "Akun",
     signInButton: "Masuk",
