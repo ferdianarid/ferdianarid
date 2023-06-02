@@ -13,6 +13,7 @@ import ProjectCarousel from "@components/templates/ProjectCarousel"
 import { HeadingText, ParagraphText } from "@components/atoms/Text"
 import en from "@locales/en"
 import id from "@locales/id"
+import { TypeAnimation } from "react-type-animation"
 
 const Home: NextPage = () => {
   const router = useRouter()
@@ -26,9 +27,15 @@ const Home: NextPage = () => {
   return (
     <Fragment>
       <Meta />
-      <div className="w-full py-3 px-[120px] bg-green-500 dark:bg-[#1f1e2e] flex items-center justify-center gap-2">
+      <div className="w-full py-3 md:px-[120px] bg-green-500 dark:bg-[#1f1e2e] flex items-center justify-center gap-2">
         <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
-        <h1 className="text-sm font-semibold text-neutral-10 dark:text-neutral-10 text-center">Currently work at Dipa Inhouse</h1>
+        <TypeAnimation
+          sequence={[
+            "Currently work at Dipa Inhouse"
+          ]}
+          className="text-sm font-semibold text-neutral-10 dark:text-neutral-10 text-center"
+          cursor={false}
+        />
       </div>
       <PagesLayout>
         <Header lang={lang} emailHandler={emailHandler} />

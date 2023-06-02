@@ -7,7 +7,7 @@ import { useRouter } from "next/router"
 import en from "@locales/en"
 import id from "@locales/id"
 import { LanguageList } from "@data/data"
-import Switcher from "@components/atoms/Button/Switcher"
+// import Switcher from "@components/atoms/Button/Switcher"
 import clsx from "clsx"
 
 const Navbar: React.FC = () => {
@@ -78,14 +78,14 @@ const Navbar: React.FC = () => {
                       </option>
                     ))}
                   </select>
-                  <Switcher />
+                  {/* <Switcher /> */}
                 </div>
               </div>
             </div>
             <div className="flex md:w-fit md:space-x-4 justify-between">
-              <div className="block mr-2 mt-1 md:hidden">
+              {/* <div className="block mr-2 mt-1 md:hidden">
                 <Switcher />
-              </div>
+              </div> */}
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
