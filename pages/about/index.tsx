@@ -17,7 +17,7 @@ const About = () => {
                 <ParagraphText>Playground photo about me</ParagraphText>
               </div>
             </div>
-            <h1 className="font-bold mt-10 text-xl text-neutral-10">Company Photo</h1>
+            <h1 className="font-gilroy-bold mt-10 text-xl text-neutral-10">Company Photo</h1>
             <div className="mt-6 grid phone:grid-cols-2 tablet:grid-cols-2 grid-cols-3 phone:gap-4 gap-6">
               {companyList.map((company: ICompany) => (
                 <CompanyCard key={company.id} company={company.company} route={company.route} />

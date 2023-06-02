@@ -17,7 +17,7 @@ const CompanyLayout = ({ companyName, children }: { companyName: string, childre
               <div className="">
                 <button onClick={() => router.back()} className="flex items-center gap-2 mb-7">
                   <FaChevronLeft size={10} className="dark:text-neutral-10 text-primary-pressed" />
-                  <h3 className="font-medium text-sm dark:text-neutral-10 text-primary-pressed">Back to previous</h3>
+                  <h3 className="font-gilroy-medium text-sm dark:text-neutral-10 text-primary-pressed">Back to previous</h3>
                 </button>
                 <PageText isLight>{companyName}</PageText>
                 <ParagraphText>Activity during work at {companyName}</ParagraphText>
