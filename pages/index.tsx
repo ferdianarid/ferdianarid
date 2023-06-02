@@ -29,13 +29,15 @@ const Home: NextPage = () => {
       <Meta />
       <div className="w-full py-3 md:px-[120px] bg-green-500 dark:bg-[#1f1e2e] flex items-center justify-center gap-2">
         <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
-        <TypeAnimation
-          sequence={[
-            "Currently work at Dipa Inhouse"
-          ]}
-          className="text-sm font-semibold text-neutral-10 dark:text-neutral-10 text-center"
-          cursor={false}
-        />
+        <h1>
+          <TypeAnimation
+            sequence={[
+              "Currently work at Dipa Inhouse"
+            ]}
+            className="text-sm font-semibold text-neutral-10 dark:text-neutral-10 text-center"
+            cursor={false}
+          />
+        </h1>
       </div>
       <PagesLayout>
         <Header lang={lang} emailHandler={emailHandler} />
