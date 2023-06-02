@@ -26,6 +26,10 @@ const Home: NextPage = () => {
   return (
     <Fragment>
       <Meta />
+      <div className="w-full py-3 px-[120px] bg-green-500 dark:bg-[#1f1e2e] flex items-center justify-center gap-2">
+        <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+        <h1 className="text-sm font-semibold text-neutral-10 dark:text-neutral-10 text-center">Currently work at Dipa Inhouse</h1>
+      </div>
       <PagesLayout>
         <Header lang={lang} emailHandler={emailHandler} />
 

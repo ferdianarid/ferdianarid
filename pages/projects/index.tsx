@@ -36,6 +36,7 @@ const Projects: NextPage = ({ project }: any) => {
                             <div className="">
                                 <PageText isLight>{lang.headerProject}</PageText>
                                 <ParagraphText>{lang.subheaderProject}</ParagraphText>
+                                <p className="mt-2 font-medium text-semantic-warning-main text-xs rounded-md py-1 px-2 bg-semantic-warning-main bg-opacity-20 w-fit">Showing {project.length} projects</p>
                             </div>
                             <div className="w-full md:w-fit flex items-center">
                                 <input type="search" ref={queryRefs} className="w-full bg-slate-100 dark:bg-primary-hover text-sm py-[13px] px-4 rounded-l-lg text-neutral-10 focus:outline-none focus:border-2 focus:border-semantic-warning-main" placeholder={lang.searchbarProject} name="query" id="query" />

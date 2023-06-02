@@ -19,7 +19,7 @@ export const PageText: React.FC<ITextProps> = ({ children, isLight, className })
 
 export const ParagraphText: React.FC<ITextProps> = ({ children, isLight, className }) => {
     return <p className={clsx(
-        isLight ? "text-primary-pressed dark:text-neutral-10" : "text-neutral-70",
+        isLight ? "dark:text-neutral-10" : "text-neutral-60",
         "text-heading-7 leading-relaxed font-gilroy-normal",
         className
     )}> {children}</p >
