@@ -40,15 +40,15 @@ export const karismaImageList: ICompanyCard[] = [
 ]
 
 export const hacksprintImageList: ICompanyCard[] = [
-    { id: 1, image: "hacksprint/hacksprint1.jpg", title: "Define problem phase in Design Thinking" },
-    { id: 2, image: "hacksprint/hacksprint2.jpg", title: "Define main problem with Mentor" },
-    { id: 3, image: "hacksprint/hacksprint3.jpg", title: "Design Prototyping for MVP" },
-    { id: 4, image: "hacksprint/hacksprint4.jpg", title: "Work together with team" },
-    { id: 5, image: "hacksprint/hacksprint5.jpg", title: "Sketching Wireframe in paper" },
-    { id: 6, image: "hacksprint/hacksprint6.jpg", title: "Checking UI with Mentor" },
-    { id: 7, image: "hacksprint/hacksprint7.jpg", title: "Work together with cross team" },
-    { id: 8, image: "hacksprint/hacksprint8.jpg", title: "Define User Persona and Point of View" },
-    { id: 9, image: "hacksprint/hacksprint9.jpg", title: "Crazy8 to visualize possible solution" },
+    { id: 1, image: "compressed/hacksprint/hacksprint1.jpg", title: "Define problem phase in Design Thinking" },
+    { id: 2, image: "compressed/hacksprint/hacksprint2.jpg", title: "Define main problem with Mentor" },
+    { id: 3, image: "compressed/hacksprint/hacksprint3.jpg", title: "Design Prototyping for MVP" },
+    { id: 4, image: "compressed/hacksprint/hacksprint4.jpg", title: "Work together with team" },
+    { id: 5, image: "compressed/hacksprint/hacksprint5.jpg", title: "Sketching Wireframe in paper" },
+    { id: 6, image: "compressed/hacksprint/hacksprint6.jpg", title: "Checking UI with Mentor" },
+    { id: 7, image: "compressed/hacksprint/hacksprint7.jpg", title: "Work together with cross team" },
+    { id: 8, image: "compressed/hacksprint/hacksprint8.jpg", title: "Define User Persona and Point of View" },
+    { id: 9, image: "compressed/hacksprint/hacksprint9.jpg", title: "Crazy8 to visualize possible solution" },
 ]
 
 export const teamupImageList: ICompanyCard[] = [
