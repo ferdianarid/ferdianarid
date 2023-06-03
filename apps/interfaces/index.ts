@@ -63,4 +63,5 @@ export interface ICompany {
     id?: number
     company: string
     route?: string|any
+    thumbnailImage: string
 }

@@ -13,6 +13,18 @@
     width: 100%;
 }
 
+.overlay {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, .4), rgba(0, 0, 0, .9), rgba(0, 0, 0, .4));
+}
+
+.titleCompanyCard {
+    transition: .3s all;
+}
+
+.companyCardWrapper:hover .titleCompanyCard {
+    transform: scale(1.15);
+}
+
 .register {
     background-image: url(../../public/images/auth/research.svg);
     background-size: cover;

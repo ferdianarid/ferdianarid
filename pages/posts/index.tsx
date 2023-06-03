@@ -12,10 +12,10 @@ import { PageText, ParagraphText } from "@components/atoms/Text"
 const Posts: NextPage = ({ posts }: any) => {
     const queryRefs = useRef<HTMLInputElement>(null)
 
-    const queryHandler = (items: any) => {
+    const queryHandler = () => {
         if (queryRefs.current !== null) {
             const queryKey = queryRefs.current.value
-            const result = items.filter((text: any) => text.frontMatter.title).includes(queryKey)
+            const result = posts.filter((text: any) => text.frontMatter.title).includes(queryKey)
             return result
         }
     }
@@ -30,9 +30,9 @@ const Posts: NextPage = ({ posts }: any) => {
                                 <PageText isLight>All Posts.</PageText>
                                 <ParagraphText>this is a post that you can read anytime</ParagraphText>
                             </div>
-                            <div className="flex items-center">
-                                <input ref={queryRefs} className="bg-slate-100 dark:bg-primary-hover text-heading-6 py-2 px-4 rounded-l-lg text-neutral-10 focus:outline-none focus:border-2 focus:border-semantic-warning-main" type="text" placeholder="Search Post" name="query" id="query" />
-                                <button onClick={queryHandler} className="py-3 text-heading-6 text-neutral-10 px-4 rounded-r-lg bg-slate-100 dark:bg-primary-hover"><FaSearch className="text-neutral-40 dark:text-neutral-10" size={21} /></button>
+                            <div className="w-full md:w-fit flex items-center">
+                                <input type="search" ref={queryRefs} className="w-full bg-slate-100 dark:bg-primary-hover text-sm py-[13px] px-4 rounded-l-lg text-neutral-10 focus:outline-none focus:border-2 focus:border-semantic-warning-main" placeholder="Search posts" name="query" id="query" />
+                                <button onClick={queryHandler} className="py-[14px] text-heading-6 text-neutral-10 px-4 rounded-r-lg bg-slate-100 dark:bg-primary-hover"><FaSearch className="text-neutral-40 dark:text-neutral-10" size={21} /></button>
                             </div>
                         </div>
                         <div className="w-full grid grid-cols-1 gap-2 md:grid-cols-3">

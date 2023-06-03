@@ -8618,6 +8618,11 @@
   "resolved" "https://registry.npmjs.org/react-icons/-/react-icons-4.9.0.tgz"
   "version" "4.9.0"
 
+"react-intersection-observer@^9.4.4":
+  "integrity" "sha512-KQr8ezJscRSQZR0/TjogG4mZttCzdPZj8fhDzAK+xrPYOVvFjabRNy+4EY3UhS3fJaJyIedGjA8y4yKX+nc08w=="
+  "resolved" "https://registry.npmjs.org/react-intersection-observer/-/react-intersection-observer-9.4.4.tgz"
+  "version" "9.4.4"
+
 "react-is@^16.12.0 || ^17.0.0 || ^18.0.0", "react-is@^16.13.1", "react-is@^16.7.0":
   "integrity" "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
@@ -8780,7 +8785,7 @@
     "resize-observer-polyfill" "^1.5.1"
     "scheduler" "0.13.3"
 
-"react@*", "react@^15.3.0 || 16 || 17 || 18", "react@^16 || ^17 || ^18", "react@^16.0.0", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0  || >=17.0.0 || >=18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^18.0.0", "react@^18.2.0", "react@>= 15.0.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>=16", "react@>=16.13", "react@>=16.8", "react@>=16.8.0", "react@>=16.x <=18.x", "react@>=17.0", "react@>=18.0", "react@>=18.0.0", "react@18.2.0":
+"react@*", "react@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^15.3.0 || 16 || 17 || 18", "react@^16 || ^17 || ^18", "react@^16.0.0", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0  || >=17.0.0 || >=18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^18.0.0", "react@^18.2.0", "react@>= 15.0.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>=16", "react@>=16.13", "react@>=16.8", "react@>=16.8.0", "react@>=16.x <=18.x", "react@>=17.0", "react@>=18.0", "react@>=18.0.0", "react@18.2.0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"

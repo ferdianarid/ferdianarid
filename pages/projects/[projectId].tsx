@@ -11,6 +11,7 @@ import { ContentHeading } from "@components/atoms/Text"
 import { FaCalendarDay } from "react-icons/fa"
 import { MDXRemote } from "next-mdx-remote"
 import MDXComponents from "@components/md/MDXComponents"
+import PreviousButton from "@components/moleculs/PreviousButton"
 
 const ProjectDetail: NextPage = ({ frontMatter, mdxSource }: any) => {
     const { name, category, imageUrl, author, role, createdAt } = frontMatter
@@ -21,6 +22,7 @@ const ProjectDetail: NextPage = ({ frontMatter, mdxSource }: any) => {
                 <div className="w-full bg-neutral-10 dark:bg-primary-pressed text-neutral-10">
                     <div className="max-w-[1440px] mx-auto px-6 md:px-48">
                         <div className="w-full mb-5 pt-10">
+                            <PreviousButton />
                             <Image src={`/images/projects/${imageUrl}.png`} className='rounded-2xl' objectFit='cover' width={1000} height={500} alt="cover" />
                         </div>
                         <h3 className="font-gilroy-bold text-sm md:text-md dark:text-neutral-10 text-primary-pressed bg-semantic-warning-main py-2 px-4 w-fit rounded-xl">{category}</h3>

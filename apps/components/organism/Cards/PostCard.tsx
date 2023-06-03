@@ -33,7 +33,7 @@ const PostCard: React.FC<IPostCard> = ({ imagePath, postId, title, description, 
                                 <span className="text-gray-600 text-sm leading-[1.1]">{description}</span>
                             </div>
                             <Link href={`/posts/${postId}`}>
-                                <button className="button-primary-sm">Read Post</button>
+                                <button className="py-2 text-neutral-10 text-sm font-gilroy-medium px-6 rounded-lg bg-primary-pressed border-none">Read Post</button>
                             </Link>
                         </div>
                     </div>
