@@ -1,13 +1,14 @@
 import React from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { motion } from "framer-motion"
 import { FaStar } from "react-icons/fa"
 import { IPostCard } from "@interfaces/index"
 
-const PostCard: React.FC<IPostCard> = ({ imagePath, postId, title, description, category }) => {
+const PostCard: React.FC<IPostCard> = ({ imagePath, postId, title, description, category, variant }) => {
     return (
         <React.Fragment>
-            <div className="w-full p-4">
+            <motion.div variants={variant} className="w-full p-4">
                 <div className="h-40 relative">
                     <Image src={imagePath} alt="cover post" layout="fill" className="w-full object-cover object-center rounded-2xl shadow-md" />
 
@@ -38,7 +39,7 @@ const PostCard: React.FC<IPostCard> = ({ imagePath, postId, title, description, 
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </React.Fragment >
     )
 }

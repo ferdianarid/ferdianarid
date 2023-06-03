@@ -15,6 +15,7 @@ export interface IRecentProject {
     liveBadge?: boolean
     projectId?: string | any
     projectUrl?: string | any
+    variant?:any
 }
 
 export interface IExperience {
@@ -37,6 +38,7 @@ export interface IPostCard {
     title: string
     description: string
     category: string
+    variant?: any
 }
 
 export interface IStats {

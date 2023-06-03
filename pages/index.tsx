@@ -3,17 +3,16 @@ import type { NextPage } from "next"
 import { useRouter } from "next/router"
 import { Meta } from "@modules/Meta"
 import PagesLayout from "@layouts/PagesLayout"
-import { statistics } from "@data/statistics"
 import Header from "@containers/homepage/Header"
 import Background from "@containers/homepage/Background"
 import Journey from "@containers/homepage/Journey"
 import PopularTech from "@containers/homepage/PopularTech"
-import Stats from "@components/moleculs/Stats"
 import ProjectCarousel from "@components/templates/ProjectCarousel"
 import { HeadingText, ParagraphText } from "@components/atoms/Text"
 import en from "@locales/en"
 import id from "@locales/id"
 import { TypeAnimation } from "react-type-animation"
+import CountUp from "react-countup"
 
 const Home: NextPage = () => {
   const router = useRouter()
@@ -44,9 +43,29 @@ const Home: NextPage = () => {
 
         <div className="w-full">
           <div className="max-w-[1200px] bg-white mx-auto -mt-28 md:-mt-16 grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8 py-10 px-6 md:px-24 rounded-3xl relative z-20">
-            {statistics.map((item: any) => (
-              <Stats key={item.id} count={item.count} title={item.title} />
-            ))}
+            <div className="flex flex-col space-y-1 items-center">
+              <CountUp start={0} end={8} className="font-gilroy-bold text-primary-main text-4xl" duration={10} />
+              <h2 className="font-gilroy-medium text-md text-primary-main">Project Released</h2>
+            </div>
+
+            <div className="flex flex-col space-y-1 items-center">
+              <CountUp start={0} end={3400} className="font-gilroy-bold text-primary-main text-4xl" duration={10} />
+              <h2 className="font-gilroy-medium text-md text-primary-main">Github Commits</h2>
+            </div>
+
+            <div className="flex flex-col space-y-1 items-center">
+              <div className="flex items-center font-gilroy-bold text-primary-main text-4xl">
+                <CountUp start={0} end={3} className="font-gilroy-bold text-primary-main text-4xl" duration={10} />+ years
+              </div>
+              <h2 className="font-gilroy-medium text-md text-primary-main">Join in Company</h2>
+            </div>
+
+            <div className="flex flex-col space-y-1 items-center">
+              <div className="flex items-center font-gilroy-bold text-primary-main text-4xl">
+                <CountUp start={0} end={10} className="font-gilroy-bold text-primary-main text-4xl" duration={10} />+
+              </div>
+              <h2 className="font-gilroy-medium text-md text-primary-main">Technology Used</h2>
+            </div>
           </div>
         </div>
 

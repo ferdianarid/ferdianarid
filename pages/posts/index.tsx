@@ -2,12 +2,14 @@ import fs from "fs"
 import * as path from "path"
 import { Fragment, useRef } from "react"
 import { NextPage } from "next/types"
+import { motion } from "framer-motion"
 import matter from "gray-matter"
 import { FaSearch } from "react-icons/fa"
 import { Meta } from "@modules/Meta"
 import PagesLayout from "@layouts/PagesLayout"
 import PostCard from "@components/organism/Cards/PostCard"
 import { PageText, ParagraphText } from "@components/atoms/Text"
+import { childVariant, containerVariant } from "apps/animations/animationVariant"
 
 const Posts: NextPage = ({ posts }: any) => {
     const queryRefs = useRef<HTMLInputElement>(null)
@@ -35,11 +37,11 @@ const Posts: NextPage = ({ posts }: any) => {
                                 <button onClick={queryHandler} className="py-[14px] text-heading-6 text-neutral-10 px-4 rounded-r-lg bg-slate-100 dark:bg-primary-hover"><FaSearch className="text-neutral-40 dark:text-neutral-10" size={21} /></button>
                             </div>
                         </div>
-                        <div className="w-full grid grid-cols-1 gap-2 md:grid-cols-3">
+                        <motion.div initial="hidden" animate="visible" variants={containerVariant} className="w-full grid grid-cols-1 gap-2 md:grid-cols-3">
                             {posts.map((post: any, idx: number) => (
-                                <PostCard key={idx} imagePath={post.frontMatter.imageUrl} postId={post.postId} title={post.frontMatter.title} description={post.frontMatter.description} category={post.frontMatter.category} />
+                                <PostCard key={idx} variant={childVariant} imagePath={post.frontMatter.imageUrl} postId={post.postId} title={post.frontMatter.title} description={post.frontMatter.description} category={post.frontMatter.category} />
                             ))}
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </PagesLayout>

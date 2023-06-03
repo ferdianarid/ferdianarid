@@ -35,10 +35,10 @@ const Header = ({ lang, emailHandler }: { lang: any, emailHandler: any }) => {
               <h1 className="font-gilroy-normal text-sm text-primary-main">Frontend Engineer</h1>
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1.2, delay: 1.5 }} className="absolute right-4 -top-14 md:-right-10 rounded-xl md:top-16 h-fit z-20 w-fit bg-neutral-10 shadow-lg p-4">
-              <Image src="/images/framer-logo.png" width={80} height={70} alt="react" />
+              <motion.img className="w-[80px] h-[80px]" initial={{ opacity: 0, scale: 0, rotate: 0 }} animate={{ opacity: 1, scale: 1, rotate: 360 }} transition={{ duration: 1, delay: 1.5 }} src="/images/framer-logo.png" alt="framer" />
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1.5, delay: 1 }} className="absolute left-5 rounded-xl -top-14 h-fit z-10 w-fit bg-neutral-10 shadow-lg p-5 flex items-center justify-center">
-              <Image src="/images/react-logo.png" width={80} height={70} alt="react" />
+              <motion.img className="w-[80px] h-[70px]" initial={{ opacity: 0, scale: 0, rotate: 0 }} animate={{ opacity: 1, scale: 1, rotate: 360 }} transition={{ duration: 1, delay: 1.5 }} src="/images/react-logo.png" alt="react" />
             </motion.div>
           </motion.div>
         </div>

@@ -1,6 +1,7 @@
 import * as fs from "fs"
 import path from "path"
 import { NextPage } from "next"
+import { motion } from "framer-motion"
 import { useRouter } from "next/router"
 import matter from "gray-matter"
 import { Fragment, useRef } from "react"
@@ -11,6 +12,7 @@ import { PageText, ParagraphText } from "@components/atoms/Text"
 import ProjectCard from "@components/organism/Cards/ProjectCard"
 import id from "@locales/id"
 import en from "@locales/en"
+import { childVariant, containerVariant } from "apps/animations/animationVariant"
 
 const Projects: NextPage = ({ project }: any) => {
     const queryRefs = useRef<HTMLInputElement>(null)
@@ -43,10 +45,11 @@ const Projects: NextPage = ({ project }: any) => {
                                 <button onClick={queryHandler} className="py-3 text-heading-6 text-neutral-10 px-4 rounded-r-lg bg-slate-100 dark:bg-primary-hover"><FaSearch className="text-neutral-40 dark:text-neutral-10" size={21} /></button>
                             </div>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 h-full gap-12 md:gap-8 mt-8">
+                        <motion.div initial="hidden" animate="visible" variants={containerVariant} className="grid grid-cols-1 md:grid-cols-3 h-full gap-12 md:gap-8 mt-8">
                             {project.map((item: any) => (
                                 <ProjectCard
                                     key={item.id}
+                                    variant={childVariant}
                                     isLight
                                     liveBadge
                                     projectId={item.projectId}
@@ -56,7 +59,7 @@ const Projects: NextPage = ({ project }: any) => {
                                     description={item.frontMatter.description}
                                 />
                             ))}
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </PagesLayout>

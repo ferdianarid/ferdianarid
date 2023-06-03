@@ -14,8 +14,9 @@ import { useRouter } from "next/router"
 import id from "@locales/id"
 import en from "@locales/en"
 import truncateString from "apps/helpers/truncateString"
+import { motion } from "framer-motion"
 
-const ProjectCard: React.FC<IRecentProject> = ({ title, fileImage, description, isLight, liveBadge, projectId, projectUrl }) => {
+const ProjectCard: React.FC<IRecentProject> = ({ title, fileImage, description, isLight, liveBadge, projectId, projectUrl, variant }) => {
   const router = useRouter()
   const { locale } = router
   const lang = locale === "id" ? id : en
@@ -28,7 +29,7 @@ const ProjectCard: React.FC<IRecentProject> = ({ title, fileImage, description, 
   return (
     <Fragment>
       {/* <ConfirmModal projectUrls={projectUrl} showModal={open} onClose={closeModal} /> */}
-      <div className={clsx(
+      <motion.div variants={variant} className={clsx(
         "w-full h-full relative flex flex-col justify-between",
         "shadow-lg shadow-slate-100 dark:shadow-none",
         "rounded-2xl",
@@ -65,7 +66,7 @@ const ProjectCard: React.FC<IRecentProject> = ({ title, fileImage, description, 
             )}>{lang.buttonDetailProject}</button>
           </Link>
         </div>
-      </div>
+      </motion.div>
     </Fragment>
   )
 }
