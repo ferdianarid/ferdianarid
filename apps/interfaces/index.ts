@@ -49,8 +49,8 @@ export interface ITextProps {
     isLight?: boolean,
     className?: string
     animationEffect?: string
-    animationDuration?: string
-    animationDelay?: string
+    animationDuration?: number
+    animationDelay?: number
 }
 
 export interface ICompanyCard {
