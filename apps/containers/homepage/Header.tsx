@@ -30,14 +30,14 @@ const Header = ({ lang, emailHandler }: { lang: any, emailHandler: any }) => {
             <Image src="/images/ferdian.png" className="z-10" width={340} height={420} alt="ferdian" />
             <div className="absolute -top-16 right-0 h-40 w-64 ">
             </div>
-            <div className="absolute left-2 rounded-xl bottom-12 h-fit z-20 w-fit bg-neutral-10 shadow-lg p-5">
+            <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1.2, delay: 1 }} className="absolute left-2 rounded-xl bottom-12 h-fit z-20 w-fit bg-neutral-10 shadow-lg p-5">
               <h1 className="font-gilroy-bold text-xl text-primary-main">Ferdian Ahmad R</h1>
               <h1 className="font-gilroy-normal text-sm text-primary-main">Frontend Engineer</h1>
-            </div>
-            <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 2, delay: 1.3 }} className="absolute right-4 -top-14 md:-right-10 rounded-xl md:top-16 h-fit z-20 w-fit bg-neutral-10 shadow-lg p-4">
+            </motion.div>
+            <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1.2, delay: 1.5 }} className="absolute right-4 -top-14 md:-right-10 rounded-xl md:top-16 h-fit z-20 w-fit bg-neutral-10 shadow-lg p-4">
               <Image src="/images/framer-logo.png" width={80} height={70} alt="react" />
             </motion.div>
-            <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 2 }} className="absolute left-5 rounded-xl -top-14 h-fit z-10 w-fit bg-neutral-10 shadow-lg p-5 flex items-center justify-center">
+            <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1.5, delay: 1 }} className="absolute left-5 rounded-xl -top-14 h-fit z-10 w-fit bg-neutral-10 shadow-lg p-5 flex items-center justify-center">
               <Image src="/images/react-logo.png" width={80} height={70} alt="react" />
             </motion.div>
           </motion.div>

@@ -26,10 +26,11 @@ export const LanguageList = [
 ]
 
 export const dipaImageList: ICompanyCard[] = [
-    { id: 1, image: "dipa/dipa1.jpg", title: "While attending a Dipa Staycation" },
+    { id: 1, image: "dipa/dipateam.jpg", title: "Dipa Inhouse Photo Session" },
     { id: 2, image: "dipa/dipa2.jpg", title: "Gather After Hours at Coffee" },
     { id: 3, image: "dipa/dipa3.jpg", title: "Teamwork during Staycation" },
     { id: 4, image: "dipa/dipa4.jpg", title: "Teamwork during Staycation" },
+    { id: 5, image: "dipa/dipa5.jpg", title: "While attending a Dipa Staycation" },
 ]
 
 export const karismaImageList: ICompanyCard[] = [

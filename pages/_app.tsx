@@ -6,19 +6,22 @@ import { useRouter } from "next/router"
 import { Fragment, useEffect } from "react"
 import { Toaster } from "react-hot-toast"
 import NProgress from "nprogress"
-import AOS from "aos"
+import Aos from "aos"
 import "nprogress/nprogress.css"
 import "../apps/styles/globals.css"
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
   // NProgress.configure({ trickleRate: 0.02, trickleSpeed: 800 })
+
   useEffect(() => {
-    AOS.init({
+    Aos.init({
       duration: 900,
       once: true
     })
+  }, [])
 
+  useEffect(() => {
     const handleStart = (url: string) => {
       console.log(`Current path route: ${url}`)
       NProgress.start()
