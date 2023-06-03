@@ -14,7 +14,7 @@ const Journey = ({ lang }: { lang: any }) => {
     }
   }, [controls, inView])
   return (
-    <div className="w-full bg-neutral-10">
+    <div className="w-full bg-neutral-10 overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-6 md:px-24 py-10 md:py-16 flex justify-between flex-col md:flex-row items-center">
         <div className="w-full md:w-1/2">
           <motion.img ref={ref} initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: .5 }} src="/images/chair.webp" className="rounded-3xl h-[550px] w-[480px] object-cover" alt="chair" />
