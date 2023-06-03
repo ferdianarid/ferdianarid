@@ -2,7 +2,7 @@ import { ICompany, ICompanyCard } from "@interfaces/index"
 
 export const companyList: ICompany[] =[
     { id: 1, company: "Dipa Inhouse", route: "dipainhouse", thumbnailImage: "dipa/dipateam.jpg" },
-    { id: 2, company: "1000 Startup Digital", route: "hacksprint", thumbnailImage: "hacksprint/hacksprint2.jpg" },
+    { id: 2, company: "1000 Startup Digital", route: "hacksprint", thumbnailImage: "compressed/hacksprint/hacksprint2.jpg" },
     { id: 3, company: "TeamUp Agency", route: "teamupagency", thumbnailImage: "teamup/teamup1.jpg" },
     // { id: 4, company: "Smeshub Indonesia", route: "smeshub" },
     { id: 5, company: "Karisma Academy", route: "karismaacademy", thumbnailImage: "karisma/karisma2.jpg" },

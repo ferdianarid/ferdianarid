@@ -14,7 +14,7 @@ const Background = ({ lang }: { lang: any }) => {
     }
   }, [controls, inView])
   return (
-    <div className="w-full bg-neutral-10">
+    <div className="w-full bg-neutral-10 overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-6 md:px-24 py-24 flex flex-col md:flex-row justify-between">
         <div className="w-full md:w-1/2">
           <motion.h1 ref={ref} initial="hidden" animate={controls} variants={leftTransition} className="text-transparent bg-clip-text bg-gradient-to-r from-purple-800 pb-2 to-yellow-400 font-gilroy-bold text-5xl md:text-7xl">{lang.background}</motion.h1>
