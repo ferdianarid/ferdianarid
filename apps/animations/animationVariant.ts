@@ -11,6 +11,19 @@ export const containerVariant = {
   }
 }
 
+export const containerNavigationVariant = {
+  hidden: {
+      opacity: 0
+  },
+  visible: {
+      opacity: 1,
+      transition: {
+          delayChildren: .3,
+          staggerChildren: .3
+      }
+  }
+}
+
 export const childVariant = {
   hidden: {
       y: 200,
@@ -27,6 +40,23 @@ export const childVariant = {
       }
   }
 }
+
+export const scaleNavigationVariant = {
+    hidden: {
+        scale: 0,
+        opacity: 0
+    },
+    visible: {
+        scale: 1,
+        opacity: 1,
+        transition: {
+            duration: .2,
+            type: "easing",
+            stiffness: 300,
+            mass: .2
+        }
+    }
+  }
 
 export const scaleChildVariant = {
     hidden: {

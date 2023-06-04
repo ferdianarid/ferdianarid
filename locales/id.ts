@@ -17,7 +17,8 @@ export default {
     // Navigation Bar
     brandPortfolio: "Portofolio.",
     navigationProject: "Proyek",
-    navigationPosts: "Artikel",
+    navigationPosts: "Postingan",
+    navigationArticle: "Artikel",
     navigationExperience: "Pengalaman",
     navigationAbout: "Tentang",
     navigationService: "Layanan",

@@ -2,13 +2,13 @@ import React, { SetStateAction, useState } from "react"
 import Link from "next/link"
 import { Transition } from "@headlessui/react"
 import { motion } from "framer-motion"
-import PostsCategory from "./Popover/PostsCategory"
 import { useRouter } from "next/router"
 import en from "@locales/en"
 import id from "@locales/id"
 import { LanguageList } from "@data/data"
 import Switcher from "@components/atoms/Button/Switcher"
 import clsx from "clsx"
+import { scaleNavigationVariant, containerNavigationVariant } from "@animations/animationVariant"
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<SetStateAction<boolean | any>>(false)
@@ -28,25 +28,33 @@ const Navbar: React.FC = () => {
         <div className="">
           <div className="w-full flex items-center justify-between">
             <Link href="/">
-              <motion.div className="hover:cursor-pointer flex flex-col" initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.2 }}>
+              <motion.div className="hover:cursor-pointer flex flex-col" initial={{ opacity: 0, translateY: -50, scale: 0 }} animate={{ opacity: 1, translateY: 0, scale: 1 }} transition={{ duration: 0.5 }}>
                 <h1 data-test-id="brand" className="font-gilroy-bold text-2xl text-primary-pressed dark:text-neutral-10">{lang.brandPortfolio}</h1>
                 <p className="text-xs text-primary-pressed dark:text-neutral-10 font-gilroy-normal">Frontend Developer</p>
               </motion.div>
             </Link>
             <div className="ml-auto flex items-center space-between">
               <div className="hidden md:block">
-                <div className="ml-16 flex items-center space-x-10 relative z-20">
+                <motion.div initial="hidden" animate="visible" variants={containerNavigationVariant} className="ml-16 flex items-center space-x-10 relative z-20">
                   <Link href="/projects">
-                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.4 }} className={clsx(
+                    <motion.p variants={scaleNavigationVariant} className={clsx(
                       "text-primary-pressed dark:text-neutral-10 text-sm hover:cursor-pointer",
                       router.pathname === "/projects" ? "dark:text-semantic-warning-main font-semibold" : "dark:text-neutral-10 font-gilroy-medium"
                     )}>
                       {lang.navigationProject}
                     </motion.p>
                   </Link>
-                  <PostsCategory textColors="text-primary-pressed dark:text-neutral-10" />
+                  <Link href="/posts">
+                    <motion.p variants={scaleNavigationVariant} className={clsx(
+                      "text-primary-pressed dark:text-neutral-10 text-sm hover:cursor-pointer",
+                      router.pathname === "/posts" ? "dark:text-semantic-warning-main font-semibold" : "dark:text-neutral-10 font-gilroy-medium"
+                    )}>
+                      {lang.navigationPosts}
+                    </motion.p>
+                  </Link>
+                  {/* <PostsCategory textColors="text-primary-pressed dark:text-neutral-10" /> */}
                   <Link href="/experience">
-                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className={clsx(
+                    <motion.p variants={scaleNavigationVariant} className={clsx(
                       "text-primary-pressed dark:text-neutral-10 text-sm hover:cursor-pointer",
                       router.pathname === "/experience" ? "dark:text-semantic-warning-main font-semibold" : "dark:text-neutral-10 font-gilroy-medium"
                     )}>
@@ -54,7 +62,7 @@ const Navbar: React.FC = () => {
                     </motion.p>
                   </Link>
                   <Link href="/about">
-                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className={clsx(
+                    <motion.p variants={scaleNavigationVariant} className={clsx(
                       "text-primary-pressed dark:text-neutral-10 text-sm hover:cursor-pointer",
                       router.pathname === "/about" ? "dark:text-semantic-warning-main font-semibold" : "dark:text-neutral-10 font-gilroy-medium"
                     )}>
@@ -72,7 +80,8 @@ const Navbar: React.FC = () => {
                     </motion.p>
                   </Link> */}
                   {/* Select Language */}
-                  <select
+                  <motion.select
+                    variants={scaleNavigationVariant}
                     onChange={changeLanguage}
                     className="bg-transparent text-primary-pressed dark:text-neutral-10 text-sm font-gilroy-medium py-2"
                   >
@@ -85,9 +94,11 @@ const Navbar: React.FC = () => {
                         {item.name}
                       </option>
                     ))}
-                  </select>
-                  <Switcher />
-                </div>
+                  </motion.select>
+                  <motion.div variants={scaleNavigationVariant}>
+                    <Switcher />
+                  </motion.div>
+                </motion.div>
               </div>
             </div>
             <div className="flex md:w-fit md:space-x-4 justify-between">
@@ -131,18 +142,26 @@ const Navbar: React.FC = () => {
           >
             {(ref: any) => (
               <div className="md:hidden" id="mobile-menu">
-                <div ref={ref} className="py-2 mb-7 px-5 md:mt-0 flex flex-col space-y-3">
+                <motion.div initial="hidden" animate="visible" variants={containerNavigationVariant} ref={ref} className="py-2 mb-7 px-5 md:mt-0 flex flex-col space-y-3">
                   <Link href="/projects">
-                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.4 }} className={clsx(
+                    <motion.p variants={scaleNavigationVariant} className={clsx(
                       "text-primary-pressed py-3 rounded-lg dark:text-neutral-10 text-sm hover:cursor-pointer",
                       router.pathname === "/projects" ? "dark:text-semantic-warning-main font-semibold" : "dark:text-neutral-10 font-gilroy-medium"
                     )}>
                       {lang.navigationProject}
                     </motion.p>
                   </Link>
-                  <PostsCategory textColors="text-primary-pressed dark:text-neutral-10" />
+                  {/* <PostsCategory textColors="text-primary-pressed dark:text-neutral-10" /> */}
+                  <Link href="/posts">
+                    <motion.p variants={scaleNavigationVariant} className={clsx(
+                      "text-primary-pressed py-3 rounded-lg dark:text-neutral-10 text-sm hover:cursor-pointer",
+                      router.pathname === "/posts" ? "dark:text-semantic-warning-main font-semibold" : "dark:text-neutral-10 font-gilroy-medium"
+                    )}>
+                      {lang.navigationPosts}
+                    </motion.p>
+                  </Link>
                   <Link href="/experience">
-                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className={clsx(
+                    <motion.p variants={scaleNavigationVariant} className={clsx(
                       "text-primary-pressed py-3 rounded-lg dark:text-neutral-10 text-sm hover:cursor-pointer",
                       router.pathname === "/experience" ? "dark:text-semantic-warning-main font-semibold" : "dark:text-neutral-10 font-gilroy-medium"
                     )}>
@@ -150,7 +169,7 @@ const Navbar: React.FC = () => {
                     </motion.p>
                   </Link>
                   <Link href="/about">
-                    <motion.p initial={{ opacity: 0, translateY: -40 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 0.8 }} className={clsx(
+                    <motion.p variants={scaleNavigationVariant} className={clsx(
                       "text-primary-pressed py-3 rounded-lg dark:text-neutral-10 text-sm hover:cursor-pointer",
                       router.pathname === "/about" ? "dark:text-semantic-warning-main font-semibold" : "dark:text-neutral-10 font-gilroy-medium"
                     )}>
@@ -168,7 +187,8 @@ const Navbar: React.FC = () => {
                     </motion.p>
                   </Link> */}
                   {/* Select Language */}
-                  <select
+                  <motion.select
+                    variants={scaleNavigationVariant}
                     onChange={changeLanguage}
                     className="bg-transparent text-primary-pressed dark:text-neutral-10 text-sm font-gilroy-medium py-2"
                   >
@@ -185,8 +205,8 @@ const Navbar: React.FC = () => {
                         {/* </div> */}
                       </option>
                     ))}
-                  </select>
-                </div>
+                  </motion.select>
+                </motion.div>
               </div>
             )}
           </Transition>

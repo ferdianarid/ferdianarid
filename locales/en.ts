@@ -18,6 +18,7 @@ export default {
     brandPortfolio: "Portfolio.",
     navigationProject: "Projects",
     navigationPosts: "Posts",
+    navigationArticle: "Articles",
     navigationExperience: "Experience",
     navigationAbout: "About",
     navigationService: "Services",
