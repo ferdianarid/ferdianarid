@@ -50,9 +50,7 @@ export interface ITextProps {
     children: ReactNode | string,
     isLight?: boolean,
     className?: string
-    animationEffect?: string
-    animationDuration?: number
-    animationDelay?: number
+    variant?: any
 }
 
 export interface ICompanyCard {

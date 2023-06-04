@@ -1,4 +1,5 @@
 import clsx from "clsx"
+import { motion } from "framer-motion"
 import { ITextProps } from "@interfaces/index"
 
 export const HeadingText: React.FC<ITextProps> = ({ children, isLight, className }) => {
@@ -17,12 +18,12 @@ export const PageText: React.FC<ITextProps> = ({ children, isLight, className })
     )}>{children}</h1>
 }
 
-export const ParagraphText: React.FC<ITextProps> = ({ children, isLight, className, animationEffect, animationDuration, animationDelay }) => {
-    return <p data-aos={animationEffect} data-aos-duration={animationDuration} data-aos-delay={animationDelay} className={clsx(
+export const ParagraphText: React.FC<ITextProps> = ({ children, isLight, className, variant }) => {
+    return <motion.p variants={variant} className={clsx(
         isLight ? "dark:text-neutral-10" : "text-neutral-60",
         "text-heading-7 leading-relaxed font-gilroy-normal",
         className
-    )}> {children}</p >
+    )}> {children}</motion.p>
 }
 
 export const ContentText: React.FC<ITextProps> = ({ children, isLight, className }) => {

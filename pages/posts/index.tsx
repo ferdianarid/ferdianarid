@@ -1,8 +1,9 @@
 import fs from "fs"
 import * as path from "path"
-import { Fragment, useRef } from "react"
+import { Fragment, useRef, useEffect } from "react"
 import { NextPage } from "next/types"
-import { motion } from "framer-motion"
+import { motion, useAnimation } from "framer-motion"
+import { useInView } from "react-intersection-observer"
 import matter from "gray-matter"
 import { FaSearch } from "react-icons/fa"
 import { Meta } from "@modules/Meta"
@@ -21,6 +22,15 @@ const Posts: NextPage = ({ posts }: any) => {
             return result
         }
     }
+
+    const controls = useAnimation()
+    const [ref, inView] = useInView()
+
+    useEffect(() => {
+        if (inView) {
+            controls.start("visible")
+        }
+    }, [controls, inView])
     return (
         <Fragment>
             <Meta />
@@ -37,7 +47,7 @@ const Posts: NextPage = ({ posts }: any) => {
                                 <button onClick={queryHandler} className="py-[14px] text-heading-6 text-neutral-10 px-4 rounded-r-lg bg-slate-100 dark:bg-primary-hover"><FaSearch className="text-neutral-40 dark:text-neutral-10" size={21} /></button>
                             </div>
                         </div>
-                        <motion.div initial="hidden" animate="visible" variants={containerVariant} className="w-full grid grid-cols-1 gap-2 md:grid-cols-3">
+                        <motion.div ref={ref} initial="hidden" animate={controls} variants={containerVariant} className="w-full grid grid-cols-1 gap-2 md:grid-cols-3">
                             {posts.map((post: any, idx: number) => (
                                 <PostCard key={idx} variant={childVariant} imagePath={post.frontMatter.imageUrl} postId={post.postId} title={post.frontMatter.title} description={post.frontMatter.description} category={post.frontMatter.category} />
                             ))}

@@ -1,11 +1,12 @@
 import * as fs from "fs"
 import path from "path"
 import { NextPage } from "next"
-import { motion } from "framer-motion"
+import { motion, useAnimation } from "framer-motion"
 import { useRouter } from "next/router"
 import matter from "gray-matter"
-import { Fragment, useRef } from "react"
+import { Fragment, useRef, useEffect } from "react"
 import { FaSearch } from "react-icons/fa"
+import { useInView } from "react-intersection-observer"
 import { Meta } from "@modules/Meta"
 import PagesLayout from "@layouts/PagesLayout"
 import { PageText, ParagraphText } from "@components/atoms/Text"
@@ -28,6 +29,15 @@ const Projects: NextPage = ({ project }: any) => {
             return queryKey
         }
     }
+
+    const controls = useAnimation()
+    const [ref, inView] = useInView()
+
+    useEffect(() => {
+        if (inView) {
+            controls.start("visible")
+        }
+    }, [controls, inView])
     return (
         <Fragment>
             <Meta />
@@ -45,7 +55,7 @@ const Projects: NextPage = ({ project }: any) => {
                                 <button onClick={queryHandler} className="py-3 text-heading-6 text-neutral-10 px-4 rounded-r-lg bg-slate-100 dark:bg-primary-hover"><FaSearch className="text-neutral-40 dark:text-neutral-10" size={21} /></button>
                             </div>
                         </div>
-                        <motion.div initial="hidden" animate="visible" variants={containerVariant} className="grid grid-cols-1 md:grid-cols-3 h-full gap-12 md:gap-8 mt-8">
+                        <motion.div ref={ref} initial="hidden" animate={controls} variants={containerVariant} className="grid grid-cols-1 md:grid-cols-3 h-full gap-12 md:gap-8 mt-8">
                             {project.map((item: any) => (
                                 <ProjectCard
                                     key={item.id}
