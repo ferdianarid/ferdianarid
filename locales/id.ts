@@ -20,6 +20,7 @@ export default {
     navigationPosts: "Postingan",
     navigationArticle: "Artikel",
     navigationExperience: "Pengalaman",
+    navigationAchievement: "Pencapaian",
     navigationAbout: "Tentang",
     navigationService: "Layanan",
     navigationAccount: "Akun",
@@ -33,6 +34,9 @@ export default {
     headerProject: "Semua Proyek.",
     subheaderProject: "Ini adalah proyek yang dapat Anda lihat dan pelajari kapan saja",
     searchbarProject: "Cari Proyek",
+    // Achievement Page
+    headerAchievement: "Semua Pencapaian.",
+    subheaderAchievement: "Pencapaian yang sudah saya dapat selama ini.",
     // Project Card
     buttonOpenProject: "Buka",
     buttonDetailProject: "Detail",

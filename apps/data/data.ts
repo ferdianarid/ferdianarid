@@ -1,4 +1,4 @@
-import { ICompany, ICompanyCard } from "@interfaces/index"
+import { ICertification, ICompany, ICompanyCard } from "@interfaces/index"
 
 export const companyList: ICompany[] =[
     { id: 1, company: "Dipa Inhouse", route: "dipainhouse", thumbnailImage: "dipa/dipateam.jpg" },
@@ -7,6 +7,15 @@ export const companyList: ICompany[] =[
     // { id: 4, company: "Smeshub Indonesia", route: "smeshub" },
     { id: 5, company: "Karisma Academy", route: "karismaacademy", thumbnailImage: "karisma/karisma2.jpg" },
     // { id: 6, company: "Global Inovasi Ventura", route: "globalinovasiventura" },
+]
+
+export const certificationList: ICertification[] = [
+    { id: 1, title: "AWS Cloud Quest : Cloud Practitioner", image: "aws.jpg", company: "Amazon Web Services ( AWS )", credential: "Work in progress" },
+    { id: 2, title: "Cloud Practitioner Essentials ( Cloud Fundamental )", image: "dicoding.jpg", company: "Dicoding Indonesia", credential: "Work in progress" },
+    { id: 3, title: "StudyJam Frontend Development - React.js", image: "nest.jpg", company: "Nest Academy", credential: "Work in progress" },
+    { id: 4, title: "Workshop Build Your First Blockchain dApp", image: "nest.jpg", company: "Nest Academy", credential: "Work in progress" },
+    { id: 5, title: "JavaScript Basic", image: "hackerrank.jpg", company: "HackerRank", credential: "Work in progress" },
+    { id: 6, title: "Problem Solving Basic", image: "hackerrank.jpg", company: "HackerRank", credential: "Work in progress" },
 ]
 
 export const TechList = [

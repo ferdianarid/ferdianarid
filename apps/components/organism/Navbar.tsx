@@ -44,14 +44,6 @@ const Navbar: React.FC = () => {
                       {lang.navigationProject}
                     </motion.p>
                   </Link>
-                  <Link href="/posts">
-                    <motion.p variants={scaleNavigationVariant} className={clsx(
-                      "text-primary-pressed dark:text-neutral-10 text-sm hover:cursor-pointer",
-                      router.pathname === "/posts" ? "dark:text-semantic-warning-main font-semibold" : "dark:text-neutral-10 font-gilroy-medium"
-                    )}>
-                      {lang.navigationPosts}
-                    </motion.p>
-                  </Link>
                   {/* <PostsCategory textColors="text-primary-pressed dark:text-neutral-10" /> */}
                   <Link href="/experience">
                     <motion.p variants={scaleNavigationVariant} className={clsx(
@@ -59,6 +51,22 @@ const Navbar: React.FC = () => {
                       router.pathname === "/experience" ? "dark:text-semantic-warning-main font-semibold" : "dark:text-neutral-10 font-gilroy-medium"
                     )}>
                       {lang.navigationExperience}
+                    </motion.p>
+                  </Link>
+                  <Link href="/achievement">
+                    <motion.p variants={scaleNavigationVariant} className={clsx(
+                      "text-primary-pressed dark:text-neutral-10 text-sm hover:cursor-pointer",
+                      router.pathname === "/achievement" ? "dark:text-semantic-warning-main font-semibold" : "dark:text-neutral-10 font-gilroy-medium"
+                    )}>
+                      {lang.navigationAchievement}
+                    </motion.p>
+                  </Link>
+                  <Link href="/posts">
+                    <motion.p variants={scaleNavigationVariant} className={clsx(
+                      "text-primary-pressed dark:text-neutral-10 text-sm hover:cursor-pointer",
+                      router.pathname === "/posts" ? "dark:text-semantic-warning-main font-semibold" : "dark:text-neutral-10 font-gilroy-medium"
+                    )}>
+                      {lang.navigationPosts}
                     </motion.p>
                   </Link>
                   <Link href="/about">
@@ -152,20 +160,28 @@ const Navbar: React.FC = () => {
                     </motion.p>
                   </Link>
                   {/* <PostsCategory textColors="text-primary-pressed dark:text-neutral-10" /> */}
-                  <Link href="/posts">
-                    <motion.p variants={scaleNavigationVariant} className={clsx(
-                      "text-primary-pressed py-3 rounded-lg dark:text-neutral-10 text-sm hover:cursor-pointer",
-                      router.pathname === "/posts" ? "dark:text-semantic-warning-main font-semibold" : "dark:text-neutral-10 font-gilroy-medium"
-                    )}>
-                      {lang.navigationPosts}
-                    </motion.p>
-                  </Link>
                   <Link href="/experience">
                     <motion.p variants={scaleNavigationVariant} className={clsx(
                       "text-primary-pressed py-3 rounded-lg dark:text-neutral-10 text-sm hover:cursor-pointer",
                       router.pathname === "/experience" ? "dark:text-semantic-warning-main font-semibold" : "dark:text-neutral-10 font-gilroy-medium"
                     )}>
                       {lang.navigationExperience}
+                    </motion.p>
+                  </Link>
+                  <Link href="/achievement">
+                    <motion.p variants={scaleNavigationVariant} className={clsx(
+                      "text-primary-pressed py-3 rounded-lg dark:text-neutral-10 text-sm hover:cursor-pointer",
+                      router.pathname === "/achievement" ? "dark:text-semantic-warning-main font-semibold" : "dark:text-neutral-10 font-gilroy-medium"
+                    )}>
+                      {lang.navigationAchievement}
+                    </motion.p>
+                  </Link>
+                  <Link href="/posts">
+                    <motion.p variants={scaleNavigationVariant} className={clsx(
+                      "text-primary-pressed py-3 rounded-lg dark:text-neutral-10 text-sm hover:cursor-pointer",
+                      router.pathname === "/posts" ? "dark:text-semantic-warning-main font-semibold" : "dark:text-neutral-10 font-gilroy-medium"
+                    )}>
+                      {lang.navigationPosts}
                     </motion.p>
                   </Link>
                   <Link href="/about">

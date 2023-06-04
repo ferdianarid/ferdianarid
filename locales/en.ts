@@ -20,6 +20,7 @@ export default {
     navigationPosts: "Posts",
     navigationArticle: "Articles",
     navigationExperience: "Experience",
+    navigationAchievement: "Achievement",
     navigationAbout: "About",
     navigationService: "Services",
     navigationAccount: "Account",
@@ -33,6 +34,9 @@ export default {
     headerProject: "All Project.",
     subheaderProject: "This is a project that you can view and learn anytime",
     searchbarProject: "Search Project",
+    // Achievement Page
+    headerAchievement: "All Achievement.",
+    subheaderAchievement: "What i have achieved so far.",
     // Project Card
     buttonOpenProject: "Open",
     buttonDetailProject: "Details",

@@ -18,6 +18,15 @@ export interface IRecentProject {
     variant?:any
 }
 
+export interface ICertification {
+  id?: number
+  image: string
+  title: string
+  company: string
+  credential: string
+  variant?:any
+}
+
 export interface IExperience {
     id?: number
     position: string

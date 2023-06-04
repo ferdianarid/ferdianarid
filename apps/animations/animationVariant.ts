@@ -18,8 +18,8 @@ export const containerNavigationVariant = {
   visible: {
       opacity: 1,
       transition: {
-          delayChildren: .3,
-          staggerChildren: .3
+          delayChildren: .1,
+          staggerChildren: .1
       }
   }
 }
@@ -50,10 +50,10 @@ export const scaleNavigationVariant = {
         scale: 1,
         opacity: 1,
         transition: {
-            duration: .2,
+            duration: .1,
             type: "easing",
             stiffness: 300,
-            mass: .2
+            mass: .1
         }
     }
   }
@@ -78,13 +78,11 @@ export const scaleChildVariant = {
   export const fadeUpAndScaleVariant = {
     hidden: {
         scale: 0,
-        opacity: 0,
-        y: -200
+        opacity: 0
     },
     visible: {
         scale: 1,
         opacity: 1,
-        y: 0,
         transition: {
             duration: .7,
             type: "easing"
