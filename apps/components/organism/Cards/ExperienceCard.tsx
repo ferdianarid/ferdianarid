@@ -1,14 +1,15 @@
 import React, { Fragment } from "react"
 import Image from "next/image"
+import { motion } from "framer-motion"
 import { ParagraphText } from "@components/atoms/Text"
 import { JobStatusBadge, MonthBadge } from "@components/atoms/Badge"
 import { IExperience } from "@interfaces/index"
 
 const ExperienceCard: React.FC<IExperience> = (props: IExperience) => {
-    const { position, image, startDate, endDate, company, duration, workStatus, location, description, jobStatus } = props
+    const { position, image, startDate, endDate, company, duration, workStatus, location, description, jobStatus, variant } = props
     return (
         <Fragment>
-            <div className="mt-10 grid gap-x-5 md:grid-cols-9 grid-cols-1">
+            <motion.div variants={variant} className="mt-10 grid gap-x-5 md:grid-cols-9 grid-cols-1">
                 <div className="relative mb-5 md:mb-0 md:col-span-1 md:w-full w-24 h-24">
                     <Image src={`/images/experience/${image}`} className="rounded-xl" layout="fill" alt={image} />
                 </div>
@@ -30,7 +31,7 @@ const ExperienceCard: React.FC<IExperience> = (props: IExperience) => {
                     </div>
                     <ParagraphText>{description}</ParagraphText>
                 </div>
-            </div>
+            </motion.div>
         </Fragment>
     )
 }

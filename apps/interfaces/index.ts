@@ -30,6 +30,7 @@ export interface IExperience {
     jobStatus: string
     location: string
     description: string | any
+    variant?: any
 }
 
 export interface IPostCard {

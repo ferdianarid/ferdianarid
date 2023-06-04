@@ -18,8 +18,8 @@
       "@locales/*": [
         "locales/*"
       ],
-      "@animation/*": [
-        "apps/animation/*"
+      "@animations/*": [
+        "apps/animations/*"
       ],
       "@components/*": [
         "apps/components/*"

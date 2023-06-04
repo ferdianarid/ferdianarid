@@ -49,7 +49,7 @@ export const scaleChildVariant = {
     hidden: {
         scale: 0,
         opacity: 0,
-        y: 200
+        y: -200
     },
     visible: {
         scale: 1,

@@ -1,6 +1,7 @@
 import { Fragment } from "react"
 import type { NextPage } from "next"
 import { useRouter } from "next/router"
+import { TypeAnimation } from "react-type-animation"
 import { Meta } from "@modules/Meta"
 import PagesLayout from "@layouts/PagesLayout"
 import Header from "@containers/homepage/Header"
@@ -11,7 +12,6 @@ import ProjectCarousel from "@components/templates/ProjectCarousel"
 import { HeadingText, ParagraphText } from "@components/atoms/Text"
 import en from "@locales/en"
 import id from "@locales/id"
-import { TypeAnimation } from "react-type-animation"
 
 const Home: NextPage = () => {
   const router = useRouter()

@@ -36,7 +36,7 @@ const Header = ({ lang, emailHandler }: { lang: any, emailHandler: any }) => {
           </motion.h1>
           <ParagraphText variant={childVariant}>{lang.subgreeting}</ParagraphText>
           <div className="mt-10 md:mt-20 flex items-center space-x-3">
-            <motion.button variants={childVariant} whileHover={{ scale: 1.1 }} whileTap={{ scale: .9 }} onClick={emailHandler} name="cta-button" className="w-full md:w-fit px-8 py-3 rounded-lg bg-semantic-warning-main font-gilroy-bold text-md text-neutral-10">{lang.email}</motion.button>
+            <motion.button variants={childVariant} whileHover={{ scale: 1.1 }} whileTap={{ scale: .9 }} onClick={emailHandler} name="cta-button" className="w-full md:w-fit px-8 py-3 phone:py-4 rounded-lg bg-semantic-warning-main font-gilroy-bold text-lg text-neutral-10">{lang.email}</motion.button>
           </div>
         </motion.div>
         <div className="w-full md:w-1/2 mt-28 md:mt-0 pl-0 md:pl-16">

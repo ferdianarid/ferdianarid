@@ -4,31 +4,21 @@ import { NextPage } from "next"
 import { motion, useAnimation } from "framer-motion"
 import { useRouter } from "next/router"
 import matter from "gray-matter"
-import { Fragment, useRef, useEffect } from "react"
-import { FaSearch } from "react-icons/fa"
+import { Fragment, useEffect } from "react"
 import { useInView } from "react-intersection-observer"
+import { childVariant, containerVariant } from "@animations/animationVariant"
 import { Meta } from "@modules/Meta"
 import PagesLayout from "@layouts/PagesLayout"
 import { PageText, ParagraphText } from "@components/atoms/Text"
 import ProjectCard from "@components/organism/Cards/ProjectCard"
 import id from "@locales/id"
 import en from "@locales/en"
-import { childVariant, containerVariant } from "apps/animations/animationVariant"
 
 const Projects: NextPage = ({ project }: any) => {
-    const queryRefs = useRef<HTMLInputElement>(null)
-
     const router = useRouter()
     const { locale } = router
 
     const lang = locale === "id" ? id : en
-
-    const queryHandler = () => {
-        if (queryRefs.current !== null) {
-            const queryKey = queryRefs.current.value
-            return queryKey
-        }
-    }
 
     const controls = useAnimation()
     const [ref, inView] = useInView()
@@ -50,10 +40,10 @@ const Projects: NextPage = ({ project }: any) => {
                                 <ParagraphText>{lang.subheaderProject}</ParagraphText>
                                 <p className="mt-2 font-medium text-semantic-warning-main text-xs rounded-md py-1 px-2 bg-semantic-warning-main bg-opacity-20 w-fit">Showing {project.length} projects</p>
                             </div>
-                            <div className="w-full md:w-fit flex items-center">
-                                <input type="search" ref={queryRefs} className="w-full bg-slate-100 dark:bg-primary-hover text-sm py-[13px] px-4 rounded-l-lg text-neutral-10 focus:outline-none focus:border-2 focus:border-semantic-warning-main" placeholder={lang.searchbarProject} name="query" id="query" />
-                                <button onClick={queryHandler} className="py-3 text-heading-6 text-neutral-10 px-4 rounded-r-lg bg-slate-100 dark:bg-primary-hover"><FaSearch className="text-neutral-40 dark:text-neutral-10" size={21} /></button>
-                            </div>
+                            {/* <div className="w-full md:w-fit flex items-center">
+                                <input type="search" className="w-full bg-slate-100 dark:bg-primary-hover text-sm py-[13px] px-4 rounded-l-lg text-neutral-10 focus:outline-none focus:border-2 focus:border-semantic-warning-main" placeholder={lang.searchbarProject} name="query" id="query" />
+                                <button type="submit" className="py-3 text-heading-6 text-neutral-10 px-4 rounded-r-lg bg-slate-100 dark:bg-primary-hover"><FaSearch className="text-neutral-40 dark:text-neutral-10" size={21} /></button>
+                            </div> */}
                         </div>
                         <motion.div ref={ref} initial="hidden" animate={controls} variants={containerVariant} className="grid grid-cols-1 md:grid-cols-3 h-full gap-12 md:gap-8 mt-8">
                             {project.map((item: any) => (

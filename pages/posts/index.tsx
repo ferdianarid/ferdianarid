@@ -1,28 +1,17 @@
 import fs from "fs"
 import * as path from "path"
-import { Fragment, useRef, useEffect } from "react"
+import { Fragment, useEffect } from "react"
 import { NextPage } from "next/types"
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import matter from "gray-matter"
-import { FaSearch } from "react-icons/fa"
 import { Meta } from "@modules/Meta"
 import PagesLayout from "@layouts/PagesLayout"
 import PostCard from "@components/organism/Cards/PostCard"
 import { PageText, ParagraphText } from "@components/atoms/Text"
-import { childVariant, containerVariant } from "apps/animations/animationVariant"
+import { childVariant, containerVariant } from "@animations/animationVariant"
 
 const Posts: NextPage = ({ posts }: any) => {
-    const queryRefs = useRef<HTMLInputElement>(null)
-
-    const queryHandler = () => {
-        if (queryRefs.current !== null) {
-            const queryKey = queryRefs.current.value
-            const result = posts.filter((text: any) => text.frontMatter.title).includes(queryKey)
-            return result
-        }
-    }
-
     const controls = useAnimation()
     const [ref, inView] = useInView()
 
@@ -42,10 +31,10 @@ const Posts: NextPage = ({ posts }: any) => {
                                 <PageText isLight>All Posts.</PageText>
                                 <ParagraphText>this is a post that you can read anytime</ParagraphText>
                             </div>
-                            <div className="w-full md:w-fit flex items-center">
-                                <input type="search" ref={queryRefs} className="w-full bg-slate-100 dark:bg-primary-hover text-sm py-[13px] px-4 rounded-l-lg text-neutral-10 focus:outline-none focus:border-2 focus:border-semantic-warning-main" placeholder="Search posts" name="query" id="query" />
-                                <button onClick={queryHandler} className="py-[14px] text-heading-6 text-neutral-10 px-4 rounded-r-lg bg-slate-100 dark:bg-primary-hover"><FaSearch className="text-neutral-40 dark:text-neutral-10" size={21} /></button>
-                            </div>
+                            {/* <div className="w-full md:w-fit flex items-center">
+                                <input type="search" className="w-full bg-slate-100 dark:bg-primary-hover text-sm py-[13px] px-4 rounded-l-lg text-neutral-10 focus:outline-none focus:border-2 focus:border-semantic-warning-main" placeholder="Search posts" name="query" id="query" />
+                                <button className="py-[14px] text-heading-6 text-neutral-10 px-4 rounded-r-lg bg-slate-100 dark:bg-primary-hover"><FaSearch className="text-neutral-40 dark:text-neutral-10" size={21} /></button>
+                            </div> */}
                         </div>
                         <motion.div ref={ref} initial="hidden" animate={controls} variants={containerVariant} className="w-full grid grid-cols-1 gap-2 md:grid-cols-3">
                             {posts.map((post: any, idx: number) => (
