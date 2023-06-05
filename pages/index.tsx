@@ -1,11 +1,11 @@
 import { Fragment } from "react"
 import type { NextPage } from "next"
 import { useRouter } from "next/router"
-import { TypeAnimation } from "react-type-animation"
 import { Meta } from "@modules/Meta"
 import PagesLayout from "@layouts/PagesLayout"
 import Header from "@containers/homepage/Header"
 import Background from "@containers/homepage/Background"
+import { TypeAnimation } from "react-type-animation"
 import Journey from "@containers/homepage/Journey"
 import PopularTech from "@containers/homepage/PopularTech"
 import ProjectCarousel from "@components/templates/ProjectCarousel"
@@ -73,7 +73,7 @@ const Home: NextPage = () => {
         <PopularTech lang={lang} />
 
         <div className="w-full">
-          <div className="max-w-[1440px] mx-auto px-6 md:px-24 py-24">
+          <div className="max-w-[1440px] mx-auto px-6 md:px-24 py-24 relative">
             <HeadingText className="text-center">{lang.recentProject}</HeadingText>
             <ParagraphText className="text-center mt-5 mb-6">{lang.descriptionRecentProject}</ParagraphText>
             <ProjectCarousel />

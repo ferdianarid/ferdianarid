@@ -41,6 +41,57 @@ export const childVariant = {
   }
 }
 
+export const childVariantFadeTransitionToLeft = {
+    hidden: {
+        x: 200,
+        opacity: 0
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {
+            duration: .7,
+            type: "easing",
+            stiffness: 500,
+            mass: .5
+        }
+    }
+  }
+
+  export const childVariantScale = {
+    hidden: {
+        scale: 0,
+        opacity: 0
+    },
+    visible: {
+        scale: 1,
+        opacity: 1,
+        transition: {
+            duration: .7,
+            type: "easing",
+            stiffness: 500,
+            mass: .5
+        }
+    }
+  }
+
+  export const childVariantFadeTransitionToRight = {
+    hidden: {
+        x: -200,
+        opacity: 0
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {
+            duration: .5,
+            type: "easing",
+            stiffness: 500,
+            mass: .3
+        }
+    }
+  }
+
 export const scaleNavigationVariant = {
     hidden: {
         scale: 0,

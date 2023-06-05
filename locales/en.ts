@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
     // Header Section
-    badge: "Technology",
+    badge: "Engineering",
     greeting: "Hi, I'm",
     subgreeting: "Frontend Developer based in Jombang. Focus to build and maintaining a website to increase accessibility and responsive interaction of every component. Make sure the web loads properly. Sometimes developing micro-interaction in the Frontend of the Website. And I am also integrating with backend API or CMS",
     email: "Email me",

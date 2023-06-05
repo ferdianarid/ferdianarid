@@ -9,6 +9,7 @@ import NProgress from "nprogress"
 import Aos from "aos"
 import "nprogress/nprogress.css"
 import "../apps/styles/globals.css"
+import "../apps/styles/nprogress.css"
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()

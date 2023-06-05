@@ -6,7 +6,7 @@ import Link from "next/dist/client/link"
 const Footer: React.FC = () => {
     return (
         <Fragment>
-            <div className="w-full bg-neutral-20 dark:bg-primary-pressed">
+            <div className="w-full bg-neutral-20 dark:bg-[#10101d]">
                 <div className="max-w-[1440px] mx-auto px-6 md:px-24 py-24">
                     <div className="grid grid-cols-2 gap-y-10 md:grid-cols-5 md:gap-5">
                         <div className="col-span-2">
@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
                                     </Link>
                                 </ParagraphText>
                                 <ParagraphText>
-                                    <Link href="https://www.linkedin.com/in/ferdianar" className="font-gilroy-medium hover:cursor-pointer">
+                                    <Link href="https://www.linkedin.com/in/ferdianarid" className="font-gilroy-medium hover:cursor-pointer">
                                         LinkedIn
                                     </Link>
                                 </ParagraphText>
