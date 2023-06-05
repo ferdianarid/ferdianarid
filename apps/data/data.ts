@@ -9,13 +9,23 @@ export const companyList: ICompany[] =[
     // { id: 6, company: "Global Inovasi Ventura", route: "globalinovasiventura" },
 ]
 
+export const communityList: ICompany[] =[
+    { id: 1, company: "Surabaya.js", route: "surabayajs", thumbnailImage: "community/surabayajs2.jpg" },
+    { id: 2, company: "IXDA Malang", route: "ixdamalang", thumbnailImage: "community/ixda.jpg" },
+    { id: 3, company: "SurabayaDev", route: "surabayadev", thumbnailImage: "community/surabayadev2.jpg" },
+    { id: 4, company: "Google Developer", route: "googledeveloper", thumbnailImage: "community/gdsc.jpg" },
+    // { id: 4, company: "Smeshub Indonesia", route: "smeshub" },
+    // { id: 6, company: "Global Inovasi Ventura", route: "globalinovasiventura" },
+]
+
 export const certificationList: ICertification[] = [
-    { id: 1, title: "AWS Cloud Quest : Cloud Practitioner", image: "aws.jpg", company: "Amazon Web Services ( AWS )", credential: "Work in progress" },
-    { id: 2, title: "Cloud Practitioner Essentials ( Cloud Fundamental )", image: "dicoding.jpg", company: "Dicoding Indonesia", credential: "Work in progress" },
-    { id: 3, title: "StudyJam Frontend Development - React.js", image: "nest.jpg", company: "Nest Academy", credential: "Work in progress" },
-    { id: 4, title: "Workshop Build Your First Blockchain dApp", image: "nest.jpg", company: "Nest Academy", credential: "Work in progress" },
-    { id: 5, title: "JavaScript Basic", image: "hackerrank.jpg", company: "HackerRank", credential: "Work in progress" },
-    { id: 6, title: "Problem Solving Basic", image: "hackerrank.jpg", company: "HackerRank", credential: "Work in progress" },
+    { id: 1, title: "AWS Cloud Quest : Cloud Practitioner", image: "aws.jpg", company: "Amazon Web Services ( AWS )", credential: "2ac3c19d-ae43-4527-bed3-2c053c824b9e", links: "https://www.credly.com/badges/2ac3c19d-ae43-4527-bed3-2c053c824b9e/public_url" },
+    { id: 2, title: "Cloud Practitioner Essentials ( Cloud Fundamental )", image: "dicoding.jpg", company: "Dicoding Indonesia", credential: "4EXGN5JK1ZRL", links: "https://www.dicoding.com/certificates/4EXGN5JK1ZRL" },
+    { id: 3, title: "Fundamental JavaScript", image: "dicoding.jpg", company: "Dicoding Indonesia", credential: "1OP8068RLXQK", links: "https://www.dicoding.com/certificates/1OP8068RLXQK" },
+    { id: 4, title: "StudyJam Frontend Development - React.js", image: "nest.jpg", company: "Nest Academy", credential: "5f3477a4-fdcb-405d-8214-dbfc646a5d7d", links: "https://sertiva.id/credential/5f3477a4-fdcb-405d-8214-dbfc646a5d7d" },
+    { id: 5, title: "Workshop Build Your First Blockchain dApp", image: "nest.jpg", company: "Nest Academy", credential: "ef424096-443c-4282-976a-3e5c86f8f663", links:"https://sertiva.id/credential/ef424096-443c-4282-976a-3e5c86f8f663" },
+    { id: 6, title: "JavaScript Basic", image: "hackerrank.jpg", company: "HackerRank", credential: "7d8372ba5746", links: "https://www.hackerrank.com/certificates/7d8372ba5746" },
+    { id: 7, title: "Problem Solving Basic", image: "hackerrank.jpg", company: "HackerRank", credential: "8afc66d81815", links: "https://www.hackerrank.com/certificates/8afc66d81815" },
 ]
 
 export const TechList = [
@@ -70,4 +80,24 @@ export const teamupImageList: ICompanyCard[] = [
     { id: 7, image: "teamup/teamup7.jpg", title: "Presentation of what has been done" },
     { id: 8, image: "teamup/teamup8.jpg", title: "Farewell Party in the last month" },
     { id: 9, image: "teamup/teamup9.jpg", title: "Presentation of what has been done" },
+]
+
+export const surabayajsImageList: ICompanyCard[] = [
+    { id: 1, image: "community/surabayajs1.jpg", title: "Workshop Surabayajs x Hacktiv8 Web Scraping" },
+    { id: 2, image: "community/surabayajs2.jpg", title: "Workshop Surabayajs x Hacktiv8 Web Scraping" },
+    { id: 3, image: "community/surabayajs3.jpg", title: "Workshop Surabayajs x Hacktiv8 Web Scraping" }
+]
+
+export const surabayadevImageList: ICompanyCard[] = [
+    { id: 1, image: "community/surabayadev1.jpg", title: "SurabayaDevxHacktiv8 Frontend with JavaScript" },
+    { id: 2, image: "community/surabayadev2.jpg", title: "SurabayaDevxHacktiv8 Frontend with JavaScript" },
+    { id: 3, image: "community/surabayadev3.jpg", title: "SurabayaDevxHacktiv8 Frontend with JavaScript" }
+]
+
+export const ixdaMalangImageList: ICompanyCard[] = [
+    { id: 1, image: "community/ixda.jpg", title: "CangkrUXan meetup#1 IXDA Malang in DILO" }
+]
+
+export const gdscImageList: ICompanyCard[] = [
+    { id: 1, image: "community/gdsc.jpg", title: "GDSC Event with Speaker Surahutomo Aziz P." }
 ]

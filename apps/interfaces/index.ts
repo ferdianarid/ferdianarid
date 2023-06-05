@@ -24,6 +24,7 @@ export interface ICertification {
   title: string
   company: string
   credential: string
+  links: string
   variant?:any
 }
 

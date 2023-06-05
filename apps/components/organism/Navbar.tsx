@@ -23,7 +23,10 @@ const Navbar: React.FC = () => {
     router.push(router.pathname, router.asPath, { locale })
   }
   return (
-    <nav className="bg-neutral-10 dark:bg-primary-pressed">
+    <nav className={clsx(
+      "bg-neutral-10 transition-all duration-700 ease-in",
+      isOpen ? "dark:bg-[#10101d]" : "dark:bg-primary-pressed"
+    )}>
       <div className="w-full max-w-[1440px] mx-auto px-5 py-[18px] md:px-24">
         <div className="">
           <div className="w-full flex items-center justify-between">

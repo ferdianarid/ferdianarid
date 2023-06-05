@@ -45,6 +45,7 @@ const Achievement = () => {
                   key={certificate.id}
                   variant={childVariant}
                   title={certificate.title}
+                  links={certificate.links}
                   image={certificate.image}
                   company={certificate.company}
                   credential={certificate.credential}
