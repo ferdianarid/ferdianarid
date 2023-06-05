@@ -18,7 +18,7 @@ const CertificationCard = ({ image, title, company, credential, links, variant }
           </button>
         </div>
         <div className="grid gap-1">
-          <h1 className="font-gilroy-medium text-sm text-neutral-60">{company}</h1>
+          <h1 className="font-gilroy-medium text-sm text-neutral-40">{company}</h1>
           <h1 className="font-gilroy-medium text-sm text-neutral-60">Credential ID {credential}</h1>
         </div>
       </div>

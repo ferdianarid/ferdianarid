@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
   }
   return (
     <nav className={clsx(
-      "bg-neutral-10 transition-all duration-700 ease-in",
+      "bg-neutral-10",
       isOpen ? "dark:bg-[#10101d]" : "dark:bg-primary-pressed"
     )}>
       <div className="w-full max-w-[1440px] mx-auto px-5 py-[18px] md:px-24">
