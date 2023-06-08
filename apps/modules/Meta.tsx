@@ -45,6 +45,7 @@ export const Meta: React.FC<MetaFunction> = ({ title }) => {
             <meta property="og:site_name" content={meta.siteName} />
             <meta property="og:description" content={meta.description} />
             <meta property="og:title" content={meta.title} />
+            <link rel="icon" href="/images/photo2.png" />
             {/* <meta name="image" property="og:image" content={meta.image} /> */}
             {/* Twitter */}
             <meta name="twitter:card" content="summary_large_image" />
