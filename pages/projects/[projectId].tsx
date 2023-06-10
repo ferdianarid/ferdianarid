@@ -46,7 +46,7 @@ const ProjectDetail: NextPage = ({ frontMatter, mdxSource }: any) => {
                         </div>
                         <div className="flex flex-col space-y-1 mb-7">
                             <h3 className="font-gilroy-bold text-lg dark:text-neutral-10 text-primary-pressed">Technology</h3>
-                            <div className="flex items-center gap-3 mt-2">
+                            <div className="flex items-center flex-wrap gap-3 mt-2">
                                 {technology?.map((tech: any, idx: number) => (
                                     <Image key={idx} src={`/images/technology/${tech}`} width={50} height={25} alt={tech} />
                                 ))}
