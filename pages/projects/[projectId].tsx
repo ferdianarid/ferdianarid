@@ -14,7 +14,7 @@ import MDXComponents from "@components/md/MDXComponents"
 import PreviousButton from "@components/moleculs/PreviousButton"
 
 const ProjectDetail: NextPage = ({ frontMatter, mdxSource }: any) => {
-    const { name, category, imageUrl, author, role, createdAt } = frontMatter
+    const { name, category, imageUrl, author, role, technology, createdAt } = frontMatter
     return (
         <Fragment>
             <Meta />
@@ -23,7 +23,9 @@ const ProjectDetail: NextPage = ({ frontMatter, mdxSource }: any) => {
                     <div className="max-w-[1440px] mx-auto px-6 md:px-48">
                         <div className="w-full mb-5 pt-10">
                             <PreviousButton />
-                            <Image src={`/images/projects/${imageUrl}.png`} className='rounded-2xl' objectFit='cover' width={1000} height={500} alt="cover" />
+                            <div className="w-full h-[450px] phone:h-[250px] relative rounded-2xl">
+                                <Image src={`/images/projects/${imageUrl}.png`} className='rounded-2xl object-cover' layout="fill" alt="cover" />
+                            </div>
                         </div>
                         <h3 className="font-gilroy-bold text-sm md:text-md dark:text-neutral-10 text-primary-pressed bg-semantic-warning-main py-2 px-4 w-fit rounded-xl">{category}</h3>
                         <ContentHeading isLight className="my-8">{name}</ContentHeading>
@@ -41,6 +43,14 @@ const ProjectDetail: NextPage = ({ frontMatter, mdxSource }: any) => {
                                 <FaCalendarDay size={24} className="mr-2" />
                                 Created at {createdAt}
                             </h3>
+                        </div>
+                        <div className="flex flex-col space-y-1 mb-7">
+                            <h3 className="font-gilroy-bold text-lg dark:text-neutral-10 text-primary-pressed">Technology</h3>
+                            <div className="flex items-center gap-3 mt-2">
+                                {technology?.map((tech: any, idx: number) => (
+                                    <Image key={idx} src={`/images/technology/${tech}`} width={50} height={25} alt={tech} />
+                                ))}
+                            </div>
                         </div>
                         <MDXRemote {...mdxSource} components={MDXComponents} />
                     </div>
