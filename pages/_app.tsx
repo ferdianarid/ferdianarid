@@ -2,6 +2,7 @@ import type {
   AppProps
   // NextWebVitalsMetric
 } from "next/app"
+import Script from "next/script"
 import { useRouter } from "next/router"
 import { Fragment, useEffect } from "react"
 import { Toaster } from "react-hot-toast"
@@ -43,6 +44,22 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Fragment>
       <Toaster position="top-right" />
+      {/* Global site tag (gtag.js) - Google Analytics */}
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', '${process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID}', {
+            page_path: window.location.pathname
+          });
+        `}
+      </Script>
       <Component {...pageProps} />
     </Fragment>
   )
