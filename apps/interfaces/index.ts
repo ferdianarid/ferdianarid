@@ -28,6 +28,12 @@ export interface ICertification {
   variant?:any
 }
 
+export interface IReleaseUpdate {
+    listUpdate: any
+    id?:number
+    dateUpdate: string
+  }
+
 export interface IExperience {
     id?: number
     position: string

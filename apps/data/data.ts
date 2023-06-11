@@ -1,4 +1,4 @@
-import { ICertification, ICompany, ICompanyCard } from "@interfaces/index"
+import { ICertification, ICompany, ICompanyCard, IReleaseUpdate } from "@interfaces/index"
 
 export const companyList: ICompany[] =[
     { id: 1, company: "Dipa Inhouse", route: "dipainhouse", thumbnailImage: "dipa/dipateam.jpg" },
@@ -17,6 +17,41 @@ export const communityList: ICompany[] =[
     // { id: 4, company: "Smeshub Indonesia", route: "smeshub" },
     // { id: 6, company: "Global Inovasi Ventura", route: "globalinovasiventura" },
 ]
+
+export const releaseUpdate: IReleaseUpdate[] = [
+  {
+    id: 4,
+    dateUpdate: "11 June 2023",
+    listUpdate: [
+      "Develop Release timeline update section",
+      "Add article about Hacktoberfest 2022"
+    ]
+  },
+    {
+      id: 1,
+      dateUpdate: "10 June 2023",
+      listUpdate: [
+        "Adjustment cover image project and post detail",
+        "Add technology list in project detail"
+      ]
+    },
+    {
+      id: 2,
+      dateUpdate: "5 June 2023",
+      listUpdate: [
+        "Add community photo SurabayaDev and Surabaya.js",
+        "Add animation in every photo list"
+      ]
+    },
+    {
+      id: 3,
+      dateUpdate: "2 June 2023",
+      listUpdate: [
+        "Update Work Experience",
+        "Add animation in Homepage"
+      ]
+    }
+  ]
 
 export const certificationList: ICertification[] = [
     { id: 1, title: "AWS Cloud Quest : Cloud Practitioner", image: "aws.jpg", company: "Amazon Web Services ( AWS )", credential: "2ac3c19d-ae43-4527-bed3-2c053c824b9e", links: "https://www.credly.com/badges/2ac3c19d-ae43-4527-bed3-2c053c824b9e/public_url" },

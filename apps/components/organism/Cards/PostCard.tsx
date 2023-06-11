@@ -9,7 +9,7 @@ const PostCard: React.FC<IPostCard> = ({ imagePath, postId, title, description, 
     return (
         <React.Fragment>
             <motion.div variants={variant} className="w-full p-4">
-                <div className="h-40 relative">
+                <div className="h-[200px] relative">
                     <Image src={imagePath} alt="cover post" layout="fill" className="w-full object-cover object-center rounded-2xl shadow-md" />
 
                     <div className="flex absolute top-4 left-4 items-baseline">
