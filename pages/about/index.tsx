@@ -2,11 +2,12 @@ import PagesLayout from "@layouts/PagesLayout"
 import React, { Fragment } from "react"
 import { motion } from "framer-motion"
 import { ParagraphText, PageText } from "@components/atoms/Text"
-import { communityList, companyList } from "@data/data"
-import { ICompany } from "@interfaces/index"
+import { communityList, companyList, releaseUpdate } from "@data/data"
+import { ICompany, IReleaseUpdate } from "@interfaces/index"
 import CompanyCard from "@components/organism/Cards/CompanyCard"
 import { childVariant, containerVariant } from "apps/animations/animationVariant"
 import { Meta } from "@modules/Meta"
+import UpdateCard from "@components/organism/Cards/UpdateCard"
 
 const About = () => {
   return (
@@ -17,9 +18,15 @@ const About = () => {
           <div className="max-w-[1440px] mx-auto py-10 px-6 md:px-24">
             <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 items-start md:items-center justify-between mb-5">
               <div className="">
-                <PageText isLight>About Me</PageText>
-                <ParagraphText>Playground photo about me</ParagraphText>
+                <PageText isLight>About</PageText>
+                <ParagraphText>Playground about me and system</ParagraphText>
               </div>
+            </div>
+            <h1 className="font-gilroy-bold mt-10 text-xl text-neutral-10">About System</h1>
+            <div className="grid mt-3 gap-3 ml-8">
+              {releaseUpdate.map((item: IReleaseUpdate) => (
+                <UpdateCard key={item.id} dateUpdate={item.dateUpdate} listUpdate={item.listUpdate} />
+              ))}
             </div>
             <h1 className="font-gilroy-bold mt-10 text-xl text-neutral-10">Company Photo</h1>
             <motion.div initial="hidden" animate="visible" variants={containerVariant} className="mt-6 grid phone:grid-cols-1 tablet:grid-cols-2 grid-cols-3 phone:gap-4 gap-6">

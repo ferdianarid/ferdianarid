@@ -20,7 +20,7 @@ const ProjectDetail: NextPage = ({ frontMatter, mdxSource }: any) => {
             <Meta />
             <PagesLayout>
                 <div className="w-full bg-neutral-10 dark:bg-primary-pressed text-neutral-10">
-                    <div className="max-w-[1440px] mx-auto px-6 md:px-48">
+                    <div className="max-w-[1440px] mx-auto px-6 md:px-48 pb-10">
                         <div className="w-full mb-5 pt-10">
                             <PreviousButton />
                             <div className="w-full h-[450px] phone:h-[250px] relative rounded-2xl">
@@ -48,7 +48,10 @@ const ProjectDetail: NextPage = ({ frontMatter, mdxSource }: any) => {
                             <h3 className="font-gilroy-bold text-lg dark:text-neutral-10 text-primary-pressed">Technology</h3>
                             <div className="flex items-center flex-wrap gap-3 mt-2">
                                 {technology?.map((tech: any, idx: number) => (
-                                    <Image key={idx} src={`/images/technology/${tech}`} width={50} height={25} alt={tech} />
+                                    <p key={idx} className="w-fit py-1 px-2 bg-primary-hover text-sm font-gilroy-semibold rounded-sm">
+                                        {tech}
+                                    </p>
+                                    // <Image key={idx} src={`/images/technology/${tech}`} width={50} height={25} alt={tech} />
                                 ))}
                             </div>
                         </div>
