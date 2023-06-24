@@ -18,6 +18,14 @@ export const PageText: React.FC<ITextProps> = ({ children, isLight, className })
     )}>{children}</h1>
 }
 
+export const TitleText: React.FC<ITextProps> = ({ children, isLight, className }) => {
+    return <h1 className={clsx(
+        isLight ? "text-primary-pressed dark:text-neutral-10" : "text-primary-pressed",
+        "font-gilroy-bold text-xl md:text-2xl",
+        className
+    )}>{children}</h1>
+}
+
 export const ParagraphText: React.FC<ITextProps> = ({ children, isLight, className, variant }) => {
     return <motion.p variants={variant} className={clsx(
         isLight ? "dark:text-neutral-10" : "text-neutral-60",

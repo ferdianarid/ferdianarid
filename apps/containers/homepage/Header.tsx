@@ -6,6 +6,7 @@ import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { childVariant, containerVariant } from "apps/animations/animationVariant"
 import NameSparkles from "@components/atoms/Sparkles/NameSparkles"
+import { FaDev, FaEnvelopeOpen, FaGithub, FaGitlab, FaLinkedin } from "react-icons/fa"
 
 const Header = ({ lang, emailHandler }: { lang: any, emailHandler: any }) => {
   const controls = useAnimation()
@@ -35,8 +36,14 @@ const Header = ({ lang, emailHandler }: { lang: any, emailHandler: any }) => {
             </div>
           </motion.h1>
           <ParagraphText variant={childVariant}>{lang.subgreeting}</ParagraphText>
-          <div className="mt-10 md:mt-20 flex items-center space-x-3">
-            <motion.button variants={childVariant} whileHover={{ scale: 1.1 }} whileTap={{ scale: .9 }} onClick={emailHandler} name="cta-button" className="w-full md:w-fit px-8 py-3 phone:py-4 rounded-lg bg-semantic-warning-main font-gilroy-bold text-lg text-neutral-10">{lang.email}</motion.button>
+          <div className="w-full mt-10 md:mt-20 flex phone:flex-col items-center md:space-x-12">
+            <motion.button variants={childVariant} whileHover={{ scale: 1.1 }} whileTap={{ scale: .9 }} onClick={emailHandler} name="cta-button" className="w-full md:w-fit px-6 py-3 phone:py-4 rounded-lg bg-semantic-warning-main font-gilroy-bold text-lg text-neutral-10 flex items-center gap-2 justify-center"><FaEnvelopeOpen size={20} className="text-neutral-10" />{lang.email}</motion.button>
+            <div className="flex items-center gap-5 phone:gap-10 phone:mt-10">
+              <FaLinkedin size={24} className="text-neutral-60" />
+              <FaGithub size={24} className="text-neutral-60" />
+              <FaGitlab size={24} className="text-neutral-60" />
+              <FaDev size={24} className="text-neutral-60" />
+            </div>
           </div>
         </motion.div>
         <div className="w-full md:w-1/2 mt-28 md:mt-0 pl-0 md:pl-16">

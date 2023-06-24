@@ -9,13 +9,40 @@ createdAt: 'September 22, 2022'
 tags: ['frontend', 'javascript', 'microfrontend', 'webdevelopment']
 ---
 
-<ContentText>Building micro-frontends to speed up and scale our web development process.</ContentText>
-<ContentText>At Bit, we build tools for over 100,000 developers working with components. Our tools help developers build, reuse, and collaborate on independent components to speed up development and improve application quality.</ContentText>
-<ContentText>Since day one weve been dogfooding our own tools, while letting components drive our architecture and development process. A great advantage of this is the ability to enjoy the benefits of Micro Front-Ends.</ContentText>
-<ContentText>By splitting the front-end monolith into smaller codebases, front-end teams can enjoy similar benefits to those of microservices: maintainable codebases, autonomous teams, independent releases, and incremental upgrades.</ContentText>
-<ContentText>Micro frontends are usually thought of as a composition of independent frontends that happens at runtime, either on the server or on the client-side.</ContentText>
-<ContentText>While runtime integrations have their benefits (smaller payloads for example) but theyre not, by any means, the only way to achieve “a composition of independently deliverable frontend applications”</ContentText>
-<ContentText>This new way of building and collaborating on frontend apps, is, in our view, the core element of micro frontends. With the right component model and the right tools, any team can adopt a modular approach to building web applications, and enjoy these benefits. For us, composing frontend apps in build-time brings the best of both worlds — the safety and robustness of “traditional monoliths” and the simplicity and scalability of micro frontends. For that, we use Bit, an open-source library that helps in making each component completely independent, and our cloud platform that lets teams efficiently collaborate and integrate together.</ContentText>
-<ContentText>In this article, I’ll show how we, at Bit, are building micro-frontends. I’ll explain how it helped us achieve goals such as decoupled codebases, fully-autonomous teams, independent incremental upgrades, and near 100% modular code reuse. I hope you’ll find this shared knowledge useful.</ContentText>
-<ContentText>Once the mouse enters a component, a highlight turns on, indicating the component’s name, independent version, and scope in which it is published and exposed. As you scroll, you’ll notice that the entire page is made of components that are independently built, versioned, and shared by different teams, in different codebases, using different build processes, and are all integrated together into one cohesive-feeling product. What you see there is a real demonstration of how our team is using modern component-driven technologies like React and Bit to build micro front-ends. On this page, you will see two sets of components, developed by two teams. One is the “base-ui” set of components, owned by our front-end infrastructure team. The second set is “evangelist’”, owned by our marketing team. Components from both sets are integrated together to quickly compose the homepage you look at, as well as other pages like the Enterprise Page or Support Page, and even to compose more applications.</ContentText>
-<ContentText>One scope of components is called “base-ui”. This is the most basic component design system of Bit.dev, that contains basic elements like “paragraph” for example. It is owned by the frontend infrastructure team and developed in its own decoupled codebase. All these components are published and shared on Bit.dev. There, they can be easily discovered and integrated into new projects by any other team that needs them. And, the team building base-ui can keep incrementally sending updates to specific components.</ContentText>
+<ContentText>To be a good programmer especially as a Frontend or React Developer, you must own or implement best practices in the project you are working on, so that you can avoid code concurrency, streamline algorithm and can easily collaborate with other programmers. Best practices among others is..</ContentText>
+
+<TitleText isLight>Naming Conventions</TitleText>
+<ContentText>- Your filenames should always have consistent casing and extension. Either use .js or .jsx as explained in code structure for extension. And use PascalCase of camelCase for filenames.</ContentText>
+
+<ContentText>- Not only name filename but also make sure that your variable, function, class, and component name are consistent with case.</ContentText>
+
+<ContentText>- In React, name on your file must be same as React Component. Inside that file without a hyphen in the filename. For Example Form-Authentication rename to FormAuthentication </ContentText>
+
+<ContentText>- When create Function for Reducer Action, write Action Types as eventNames. For Example: ADD_TO_CART, REGISTRATION_PENDING, LOGIN_SUCCESS as this matches with typical Conventions in most programming language for declaring a constants variable</ContentText>
+
+<ContentText>- When create Function for Reducer Action, write Action Types as eventNames. For Example: ADD_TO_CART, REGISTRATION_PENDING, LOGIN_SUCCESS as this matches with typical Conventions in most programming language for declaring a constants variable</ContentText>
+
+<TitleText isLight>Good Commenting Practices</TitleText>
+<ContentText>- Use comment to explain <i>Why you did something like this or how you did it</i> If you find yourself explaining how you did something, then its time to make your code self-explanatory</ContentText>
+
+<ContentText>- Write Legal, Informative and offer clarification</ContentText>
+
+<ContentText>- Not write comment that are obvious and redudant</ContentText>
+
+<TitleText isLight>Using ES6 Features</TitleText>
+<ContentText>- Use Destructure, always Destructure your props helps make your code more cleaner and maintainable. It also makes assigning object properties to variable feels like much less or chore.</ContentText>
+
+<ContentText>- Use const instead var or let. const let you check that variable should always stay constant or unique. let indicated that values of the variable can be reassign or can be changed</ContentText>
+
+<ContentText>- Use Arrow Function for Write Function Component in React for more cleaner code. Arrow function allow simplifying your code to a singleline</ContentText>
+
+<TitleText isLight>Use Fragments Instead of Div</TitleText>
+<ContentText>React Components need to return code wrapped in a single tag usually div element or React Fragment. Using div increase DOM size especially in huge project because more tags div unused in DOM nodes you have. And the website need more memory to use load element in website. This leads to lower pagespeed and potentially poor user experience.</ContentText>
+
+<TitleText isLight>Avoid using Indexes as Key of Props</TitleText>
+<ContentText>React use keys to uniquely identify items in an array. With keys, react can pinpoint which item has been added, changed, or remove from the array</ContentText>
+
+<TitleText isLight>Code Structure</TitleText>
+<ContentText>Make sure your import statement are on new line, as this make your import clean and easy to understand for all component, third party libraries and other.</ContentText>
+
+<ContentText>Dont confused with single quote or double quotes, use single quote for javascript code and use double quote for JSX Code or equivalent. This is make you easily to maintain your code in future</ContentText>
